@@ -1,12 +1,12 @@
 {
-  "name": "bootstrap4-bem-template",
-  "version": "4.0.0",
-  "description": "The Markup and technical solutions for Name",
+  "name": "live-english",
+  "version": "3.2.0",
+  "description": "The Markup and technical solutions for Live English site",
   "author": "Igor Beliakovski",
   "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/des-yogi/live-english"
   },
   "scripts": {
     "test:style": "stylelint \"src/**/*.scss\" --syntax=scss",
@@ -18,13 +18,14 @@
     "precommit": "lint-staged"
   },
   "browserslist": [
-    "> 1%",
+    "> 0.5%",
     "last 2 versions"
   ],
   "lint-staged": {
     "*.scss": "stylelint --syntax=scss"
   },
   "devDependencies": {
+    "@babel/core": "^7.16.0",
     "autoprefixer": "^10.2.1",
     "browser-sync": "^2.26.3",
     "const": "^1.0.0",
@@ -40,46 +41,46 @@
     "gulp-file-include": "^2.1.0",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^3.0.0",
-    "gulp-imagemin": "^7.0.0",
+    "gulp-imagemin": "^8.0.0",
     "gulp-newer": "^1.4.0",
-    "gulp-notify": "^3.2.0",
+    "gulp-notify": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
     "gulp-real-favicon": "^0.3.1",
     "gulp-rename": "^2.0.0",
     "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "gulp-sequence": "^1.0.0",
-    "gulp-size": "^3.0.0",
+    "gulp-size": "^4.0.1",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-svgmin": "^3.0.0",
-    "gulp-svgstore": "^7.0.0",
-    "gulp-uglify-es": "^2.0.0",
+    "gulp-svgmin": "^4.0.1",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-uglify-es": "^3.0.0",
     "gulp-wait": "0.0.2",
     "gulp.spritesmith": "^6.9.0",
-    "husky": "^5.1.3",
+    "husky": "^7.0.0",
     "imagemin-pngquant": "^9.0.1",
-    "lint-staged": "^10.1.2",
+    "lint-staged": "^11.0.0",
     "merge-stream": "^2.0.0",
     "mkdirp": "^0.5.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "postcss": "^8.2.4",
-    "postcss-discard-comments": "^4.0.2",
+    "postcss-discard-comments": "^5.0.1",
     "postcss-import": "^14.0.0",
     "postcss-inline-svg": "^5.0.0",
     "postcss-object-fit-images": "^1.1.2",
-    "stylelint": "^13.3.0",
+    "stylelint": "^14.0.1",
     "vinyl-buffer": "^1.0.1",
-    "yaspeller": "^7.0.0"
+    "yaspeller": "^8.0.0"
   },
   "dependencies": {
-    "jquery": "^3.6.0",
-    "popper.js": "^1.16.1",
-    "blazy": "^1.8.2",
-    "focus-visible": "^5.2.0",
-    "bootstrap": "^4.6.0",
-    "object-fit-images": "^3.2.4",
     "picturefill": "^3.0.3",
+    "focus-visible": "^5.2.0",
+    "blazy": "^1.8.2",
+    "jquery": "^3.6.0",
+    "@popperjs/core": "^1.16.1",
+    "bootstrap": "^4.6.1",
+    "object-fit-images": "^3.2.4",
     "svg4everybody": "^2.1.9"
   }
 }

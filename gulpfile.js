@@ -75,7 +75,7 @@ gulp.task('clean', function () {
 
 // Компиляция стилей блоков проекта (и добавочных)
 gulp.task('style', function () {
-  const sass = require('gulp-sass');
+  const sass = require('gulp-sass')(require('node-sass'));
   const sourcemaps = require('gulp-sourcemaps');
   const wait = require('gulp-wait');
   console.log('---------- Компиляция стилей');
@@ -116,7 +116,7 @@ gulp.task('style', function () {
 // Компиляция отдельных файлов
 gulp.task('style:single', function (callback) {
   if(projectConfig.singleCompiled.length) {
-    const sass = require('gulp-sass');
+    const sass = require('gulp-sass')(require('node-sass'));
     const sourcemaps = require('gulp-sourcemaps');
     const wait = require('gulp-wait');
     console.log('---------- Компиляция добавочных стилей');
@@ -302,9 +302,10 @@ gulp.task('sprite:svg', function (callback) {
         .pipe(svgmin(function (file) {
           return {
             plugins: [{
-              cleanupIDs: {
-                minify: true
-              }
+              name: 'cleanupIDs',
+              params: {
+                minify: true,
+              },
             }]
           }
         }))
