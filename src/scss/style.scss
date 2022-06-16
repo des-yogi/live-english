@@ -6,6 +6,7 @@
 
 @import './src/scss/variables.scss';
 @import './src/scss/mixins.scss';
+@import '../../node_modules/flickity/dist/flickity.min.css';
 @import './src/blocks/breadcrumbs/breadcrumbs.scss';
 @import './src/blocks/btn/btn.scss';
 @import './src/blocks/burger/burger.scss';
@@ -30,4 +31,18 @@
 @import './src/blocks/table-mobile-scroll/table-mobile-scroll.scss';
 @import './src/blocks/table-responsive/table-responsive.scss';
 @import './src/blocks/typo/typo.scss';
+@import './src/blocks/lang-switcher/lang-switcher.scss';
+@import './src/blocks/hero/hero.scss';
+@import './src/blocks/features/features.scss';
+@import './src/blocks/training-programs-card/training-programs-card.scss';
+@import './src/blocks/steps/steps.scss';
+@import './src/blocks/review-card/review-card.scss';
+@import './src/blocks/reviews-slider/reviews-slider.scss';
+@import './src/blocks/blog-card/blog-card.scss';
+@import './src/blocks/faq-index/faq-index.scss';
+@import './src/blocks/faq-block/faq-block.scss';
+@import './src/blocks/seo-text/seo-text.scss';
+@import './src/blocks/social-links/social-links.scss';
+@import './src/blocks/copyrights/copyrights.scss';
+@import './src/blocks/messenger-links/messenger-links.scss';
 @import './src/scss/print.scss';

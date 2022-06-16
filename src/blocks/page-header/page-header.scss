@@ -1,8 +1,123 @@
-// В этом файле должны быть стили для БЭМ-блока page-header, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .page-header {
+  position: relative;
+  z-index: 1;
+  height: 74px;
+  background-color: $white;
+  border-bottom: 1px solid $border-color;
+
+  @media (min-width: $screen-xl) {
+    height: 108px;
+  }
 
   $block-name:                &; // #{$block-name}__element
+
+  &__inner {
+    height: 100%;
+    align-items: center;
+  }
+
+  &__logo-col {
+    @include col(xs, 8);
+    @include col(md, 3.8);
+    @include col(lg, 4);
+    @include col(xl, 3);
+
+    @media (min-width: $screen-md) {
+      text-align: center;
+    }
+  }
+
+  &__main-col {
+    display: none;
+    @include col(md, 4.2);
+    @include col(lg, 4);
+    @include col(xl, 9);
+
+    @media (min-width: $screen-md) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      order: -1;
+    }
+
+    @media (min-width: $screen-xl) {
+      order: 0;
+      justify-content: flex-end;
+    }
+  }
+
+  &__burger-col {
+    @include col(xs, 4);
+    text-align: right;
+
+    @media (min-width: $screen-xl) {
+      display: none;
+    }
+  }
+
+  &__phones {
+    display: none;
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      margin-left: 32px;
+    }
+  }
+
+  &__phones-list {
+    display: flex;
+  }
+
+  &__phones-item {
+    //display: inline-flex;
+    //align-items: center;
+
+    & + & {
+      margin-left: 24px;
+    }
+
+    &:first-child {
+      margin-right: 24px;
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    &:first-child {
+
+      &::before {
+        margin-right: 8px;
+        background-position: center;
+        background-size: 22px;
+        background-repeat: no-repeat;
+        background-image: svg-load('../blocks/sprite-svg/svg/phone-icon.svg', fill=$main-color);
+      }
+    }
+
+    &:nth-child(2) {
+
+      &::before {
+        margin-right: 8px;
+        background-position: center;
+        background-size: 22px;
+        background-repeat: no-repeat;
+        background-image: svg-load('../blocks/sprite-svg/svg/mobile-icon.svg', fill=$main-color);
+      }
+    }
+  }
+
+  &__phones-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: inherit;
+  }
 }

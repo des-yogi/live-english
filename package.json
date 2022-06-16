@@ -76,6 +76,7 @@
   "dependencies": {
     "picturefill": "^3.0.3",
     "focus-visible": "^5.2.0",
+    "flickity": "^3.0.0",
     "blazy": "^1.8.2",
     "jquery": "^3.6.0",
     "@popperjs/core": "^1.16.1",
