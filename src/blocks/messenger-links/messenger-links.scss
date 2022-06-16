@@ -1,0 +1,52 @@
+.messenger-links {
+  display: inline-flex;
+  align-items: center;
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__item {
+    display: flex;
+
+    & + & {
+      margin-left: 24px;
+
+      @media (min-width: $screen-xl) {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 32px;
+      height: 32px;
+
+      @media (min-width: $screen-xl) {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &--viber {
+      color: $color-viber;
+    }
+
+    &--skype {
+      color: $color-skype;
+    }
+
+    &--telegram {
+      color: $color-tg;
+    }
+
+    &--whatsapp {
+      color: $color-whapp;
+    }
+  }
+}
