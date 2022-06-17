@@ -1,9 +1,141 @@
-// В этом файле должны быть стили для БЭМ-блока training-programs-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .training-programs-card {
+  position: relative;
+  height: 100%;
+  padding: 16px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius * 2;
+  box-shadow: $shadow;
+  overflow: hidden;
+
+  @media (min-width: $screen-xl) {
+    padding: 32px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  p > span {
+    padding-right: 6px;
+    font-weight: 600;
+  }
+
+  &__wrapper {
+    margin-bottom: 96px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 112px;
+    }
+
+    header {
+      margin-bottom: 32px;
+      text-align: center;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: 40px;
+        text-align: initial;
+      }
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    color: $text-color;
+    border-bottom: 1px solid $border-color;
+
+    @media (min-width: $screen-xl) {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+
+    img {
+      flex: 0 0;
+      flex-basis: 48px;
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+
+    .h5 {
+      flex: 1 1;
+      flex-basis: auto;
+      margin: 0;
+      color: inherit;
+    }
+  }
+
+  &__text {
+    margin-bottom: 16px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-weight: 600;
+    color: $main-color;
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__badge:not(:empty) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 16px;
+    font-size: 14px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: $white;
+    border-bottom-left-radius: $border-radius * 2;
+    pointer-events: none;
+
+    @media (min-width: $screen-xl) {
+      padding: 6px 24px;
+      font-size: 20px;
+    }
+  }
+
+  &__col-link {
+    @include col-offset(xs, 2);
+    @include col(xs, 8);
+    @include col-offset(md, 4);
+    @include col(md, 4);
+    @include col-offset(xl, 8);
+    @include col(xl, 4);
+  }
+
+  &__link {
+    width: 100%;
+  }
 }

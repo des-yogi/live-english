@@ -37,7 +37,8 @@
     "seo-text": [],
     "social-links": [],
     "copyrights": [],
-    "messenger-links": []
+    "messenger-links": [],
+    "slider-nav": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

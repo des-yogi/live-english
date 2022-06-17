@@ -88,6 +88,10 @@ h6 {
   @media (min-width: $screen-xl) {
     margin-top: 40px;
   }
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .h1,
