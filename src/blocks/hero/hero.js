@@ -1,8 +1,9 @@
 (function(){
   const utils = window.fizzyUIUtils;
-  console.log(utils);
-  const elem = document.querySelector('.hero__carousel');
-  if (!elem) { return; }
+  //console.log(utils);
+  const container = document.querySelector('.hero');
+  const elem = container.querySelector('.hero__carousel');
+  if (!elem && !container) { return; }
   const flkty = new Flickity( elem, {
     // options
     //cellAlign: 'left',
@@ -14,7 +15,7 @@
   });
 
   // elements
-  const cellsButtonGroup = document.querySelector('.slider-nav__pagination');
+  const cellsButtonGroup = container.querySelector('.slider-nav__pagination');
   let cellsButtons = utils.makeArray( cellsButtonGroup.children );
 
   // update buttons on select
@@ -35,12 +36,12 @@
     flkty.select( index );
   });
   // previous
-  const previousButton = document.querySelector('.slider-nav__btn--prev');
+  const previousButton = container.querySelector('.slider-nav__btn--prev');
   previousButton.addEventListener( 'click', function() {
     flkty.previous();
   });
   // next
-  const nextButton = document.querySelector('.slider-nav__btn--next');
+  const nextButton = container.querySelector('.slider-nav__btn--next');
   nextButton.addEventListener( 'click', function() {
     flkty.next();
   });

@@ -1,9 +1,97 @@
-// В этом файле должны быть стили для БЭМ-блока review-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .review-card {
+  width: 100%; /* full width */
+  //height: 160px; /* height of carousel */
+  margin-right: 24px;
 
   $block-name:                &; // #{$block-name}__element
 
+  &__img-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(xl, 8);
+
+    @media (min-width: $screen-xl) {
+      padding-top: 20px;
+      padding-left: 60px;
+    }
+  }
+
+  &__figure {
+    margin: 0;
+  }
+
+  &__fig-caption {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 32px;
+      text-align: initial;
+    }
+
+    span {
+      display: block;
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: 400;
+      color: $text-muted;
+    }
+  }
+
+  &__img {
+    max-width: 92px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: $border-radius;
+
+    @media (min-width: $screen-xl) {
+      max-width: initial;
+    }
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin: 6px;
+    padding: 42px 16px;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: $border-radius;
+    //border: 1px solid red;
+
+    @media (min-width: $screen-md) {
+      padding: 58px 48px;
+    }
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: -26px;
+      width: 52px;
+      height: 52px;
+      background-color: $main-color;
+      background-size: 24px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/sprite-svg/svg/quotes-icon.svg', fill=$white);
+      border-radius: $border-radius;
+      box-shadow: 0 8px 18px -8px rgba(99, 102, 241, 0.9);
+    }
+  }
 }

@@ -1,9 +1,76 @@
-// В этом файле должны быть стили для БЭМ-блока faq-block, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .faq-block {
 
   $block-name:                &; // #{$block-name}__element
 
+  &__card {
+    background-color: $white;
+    box-shadow: 0 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+    border-radius: $border-radius;
+
+    & + & {
+      margin-top: 16px;
+    }
+  }
+
+  &__card-header {
+    margin-bottom: 0;
+    font-size: $font-size;
+  }
+
+  &__card-btn {
+    position: relative;
+    width: 100%;
+    padding: 21px 84px 21px 24px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: inherit;
+    color: $text-color;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      background-color: $border-color;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 10px 7px;
+      background-image: svg-load('../blocks/sprite-svg/svg/arrow-down-icon.svg', fill=$text-color);
+      border-radius: 50%;
+      transition: all $transition-time;
+    }
+
+    &:hover,
+    &:focus,
+    &[aria-expanded=true] {
+
+      &::after {
+        background-color: $main-color;
+        background-image: svg-load('../blocks/sprite-svg/svg/arrow-down-icon.svg', fill=$white);
+        box-shadow: 0 8px 18px -8px rgba(99, 102, 241, 0.9);
+      }
+    }
+
+    &[aria-expanded=true] {
+
+      &::after {
+        transform: translateY(-50%) rotate(180deg);
+        box-shadow: 0 -8px 18px -8px rgba(99, 102, 241, 0.9);
+      }
+    }
+  }
+
+  &__card-body {
+    padding: 0 24px 24px;
+    color: $text-muted;
+  }
 }
