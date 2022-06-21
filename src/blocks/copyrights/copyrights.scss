@@ -1,9 +1,89 @@
-// В этом файле должны быть стили для БЭМ-блока copyrights, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .copyrights {
+  font-size: $font-size-sm;
+
+  @media (max-width: $screen-md - 1) {
+    text-align: center;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__col-links {
+    @include col(xs, 12);
+    @include col(md, 4.5);
+    @include col(xl, 7);
+  }
+
+  &__col-owner {
+    @include col(xs, 12);
+    @include col(md, 4.5);
+    @include col(xl, 3);
+  }
+
+  &__col-links,
+  &__col-owner {
+
+    @media (max-width: $screen-md - 1) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__col-dev {
+    @include col(xs, 12);
+    @include col(md, 3);
+    @include col(xl, 2);
+  }
+
+  &__owner,
+  &__dev  {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $main-color--active;
+      }
+    }
+  }
+
+  &__owner-link {
+
+    & + & {
+      margin-left: 32px;
+    }
+  }
+
+  &__dev {
+    width: 100%;
+    padding-bottom: 16px;
+    justify-content: center;
+
+    @media (min-width: $screen-md) {
+      justify-content: flex-end;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 12px;
+
+      &:hover,
+      &:focus {
+
+        img {
+          opacity: 1;
+        }
+      }
+
+      img {
+        width: 59px;
+        height: 22px;
+        opacity: $opacity;
+        transition: opacity $transition-time;
+      }
+    }
+  }
 }

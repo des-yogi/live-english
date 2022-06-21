@@ -1,9 +1,77 @@
-// В этом файле должны быть стили для БЭМ-блока steps, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .steps {
+  margin-bottom: 96px;
+  //background-size: 1200px;
+  background-repeat: no-repeat;
+  //background-position: center top 125px;
+  background-image: none !important;
+
+  @media (min-width: $screen-md) {
+    background-size: 1380px;
+    //background-repeat: no-repeat;
+    background-position: center top 64px;
+    background-image: url(../img/ease-step-bg.png) !important;
+  }
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+    background-size: 1920px;
+    //background-repeat: no-repeat;
+    background-position: center top -26px;
+    //background-image: url(../img/ease-step-bg.png);
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__header {
+    margin-bottom: 32px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 64px;
+      text-align: initial;
+    }
+  }
+
+  &__intro {
+    color: $text-muted;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 3);
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__card {
+
+  }
+
+  &__card-img {
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  &__card-text {
+    padding: 24px 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+
+    .secondary-color {
+      color: $secondary-color;
+
+      &:hover,
+      &:focus {
+        color: $secondary-color--active;
+      }
+    }
+  }
 }

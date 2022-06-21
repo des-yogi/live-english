@@ -1,0 +1,61 @@
+<!--DEV
+@ @include('blocks/mob-nav/mob-nav.html')
+" mob-nav--open "
+-->
+
+<div id="mob-nav" class="mob-nav">
+  <div class="container  mob-nav__inner">
+    <nav class="mob-nav__nav">
+      <ul class="list-nostyled  mob-nav__list">
+        <li class="mob-nav__item  active">
+          <a href="#" class="mob-nav__link">About the method</a>
+        </li>
+        <li class="mob-nav__item">
+          <a href="#" class="mob-nav__link">Programs and schedule</a>
+        </li>
+        <li class="mob-nav__item">
+          <a href="#" class="mob-nav__link">Reviews</a>
+        </li>
+        <li class="mob-nav__item">
+          <a href="#" class="mob-nav__link">Useful</a>
+        </li>
+        <li class="mob-nav__item">
+          <a href="#" class="mob-nav__link">News</a>
+        </li>
+        <li class="mob-nav__item">
+          <a href="#" class="mob-nav__link">Contacts</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="mob-nav__lang-switcher">
+      <div class="lang-switcher">
+        <ul class="list-nostyled  lang-switcher__list">
+          <li class="lang-switcher__item  active">
+            <a class="lang-switcher__link" title="Укр. язык"><span>Ua</span></a>
+          </li>
+          <li class="lang-switcher__item">
+            <a href="#" class="lang-switcher__link" title="Рус. язык"><span>Ru</span></a>
+          </li>
+          <li class="lang-switcher__item">
+            <a href="#" class="lang-switcher__link" title="Англ. язык"><span>En</span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mob-nav__footer">
+      <ul class="list-nostyled  mob-nav__contact-list">
+        <li class="mob-nav__contact-item  mob-nav__contact-item--tel">
+          <a href="#" class="mob-nav__contact-link">+38 (044) 384 16 54</a>
+        </li>
+        <li class="mob-nav__contact-item  mob-nav__contact-item--mob">
+          <a href="#" class="mob-nav__contact-link">+38 (044) 384 16 54</a>
+          <a href="#" class="mob-nav__contact-link">+38 (044) 384 16 54</a>
+        </li>
+        <li class="mob-nav__contact-item  mob-nav__contact-item--msg">
+          @@include('../../blocks/messenger-links/messenger-links.html')
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

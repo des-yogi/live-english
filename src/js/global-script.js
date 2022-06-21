@@ -87,6 +87,9 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
 (function () {
   const bLazy = new Blazy({
     // Options
-    selector: 'b-lazy'
+    selector: '.b-lazy'
   });
+
+  const sticky = new Sticky('.page-header');
+  sticky.update();
 })();

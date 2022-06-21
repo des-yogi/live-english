@@ -20,6 +20,8 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+
+    position: relative;
   }
 
   &__content {
@@ -275,6 +277,7 @@ a {
   );
 }
 
+
 /* &__element {
   @include col(); // малые ширины — 12 из 12, промежутки по умолчанию
   @include col(sm, 6, $grid-columns, 10px);  // SM (480 по умолчанию) — 6 из 12, промежутки 10px
@@ -287,8 +290,8 @@ a {
 // @include col(xs, 12);
 
 // background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color, stroke=rgba(255, 255, 255, 0));
-// background: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
-// background: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$main-color);
+// background-image: svg-load('../blocks/phones-modal/bg-img/phone.svg', fill=$main-color);
+// background-image: svg-load('../blocks/sprite-svg/svg/phone.svg', fill=$main-color);
 
 * {
   //Firefox only
@@ -334,3 +337,18 @@ a {
   }
 }
 
+.col-1-2-3 {
+  @include col(xs, 12);
+  @include col(md, 6);
+  @include col(xl, 4);
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
+}
+
+.publishedon {
+  display: block;
+  color: $text-muted;
+}

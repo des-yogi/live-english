@@ -1,35 +1,33 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-header/page-header.html')
-
 -->
 
-<header class="container  page-header">
-  <div class="row  page-header__inner">
-    <div class="page-header__logo-col">
-      @@include('../../blocks/logo/logo.html')
-    </div>
-    <div class="page-header__main-col">
-      @@include('../../blocks/messenger-links/messenger-links.html')
-      <div class="page-header__phones">
-        <ul class="list-nostyled  page-header__phones-list">
-          <li class="page-header__phones-item">
-            <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
-          </li>
-          <li class="page-header__phones-item">
-            <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
-          </li>
-          <li class="page-header__phones-item">
-            <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
-          </li>
-        </ul>
+<div class="page-header__wrapper">
+  <header class="container  page-header">
+    <div class="row  page-header__inner">
+      <div class="page-header__logo-col">
+        @@include('../../blocks/logo/logo.html')
       </div>
-      @@include('../../blocks/main-nav/main-nav.html')
+      <div class="page-header__main-col">
+        @@include('../../blocks/messenger-links/messenger-links.html')
+        <div class="page-header__phones">
+          <ul class="list-nostyled  page-header__phones-list">
+            <li class="page-header__phones-item">
+              <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
+            </li>
+            <li class="page-header__phones-item">
+              <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
+            </li>
+            <li class="page-header__phones-item">
+              <a href="tel:+380443841654" class="page-header__phones-link">+38 (044) 384 16 54</a>
+            </li>
+          </ul>
+        </div>
+        @@include('../../blocks/main-nav/main-nav.html')
+      </div>
+      <div class="page-header__burger-col">
+        @@include('../../blocks/burger/burger.html')
+      </div>
     </div>
-    <div class="page-header__burger-col">
-      @@include('../../blocks/burger/burger.html')
-    </div>
-  </div>
-</header>
+  </header>
+</div>

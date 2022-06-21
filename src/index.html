@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+<html class="no-js  page" lang="en" prefix="og: https://ogp.me/ns#">
 
 <head>
   <meta charset="utf-8">
@@ -15,43 +15,24 @@
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
 
-      <main>
+      <main class="main">
         <h1 class="visually-hidden">Live English — English for everyone</h1>
 
-        <div class="container  hero">
-          <div class="hero__carousel">
-            <div class="carousel-cell  hero__item">
-              <div class="row">
+        @@include('blocks/hero/hero.html')
 
-                <div class="hero__col-text">
-                  <h2 class="title-display hero__title">English Courses <span>Live English</span></h2>
-                  <p class="hero__descr">continue to enroll in groups of all levels</p>
-                  <p class="hero__descr-color">(from Elementary to Advanced + preparation for UP)</p>
-                  <a href="#" class="btn  hero__link"><span>Go to</span></a>
-                </div>
+        @@include('blocks/features/features.html')
 
-                <div class="hero__col-img">
-                  <div class="hero__img">
-                    <picture>
-                      <source srcset="img/hero-art.webp" type="image/webp">
-                      <img src="img/hero-art.png" alt="English Courses" width="" height="">
-                    </picture>
-                  </div>
-                </div>
+        @@include('blocks/training-programs-card/training-programs-card.html')
 
-              </div>
-            </div>
+        @@include('blocks/steps/steps.html')
 
-            <div class="carousel-cell  hero__item">
-              <div class="row">
-                <div class="hero__col-text">
+        @@include('blocks/reviews-slider/reviews-slider.html')
 
-                </div>
-                <div class="hero__col-img"></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        @@include('blocks/blog-card/blog-card.html')
+
+        @@include('blocks/faq-index/faq-index.html')
+
+        @@include('blocks/seo-text/seo-text.html')
 
       </main>
 
@@ -61,6 +42,7 @@
       @@include('blocks/page-footer/page-footer.html')
     </div>
 
+    @@include('blocks/mob-nav/mob-nav.html')
   </div>
 
   @@include('_include/page_bottom.html')

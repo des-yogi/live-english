@@ -1,9 +1,65 @@
-// В этом файле должны быть стили для БЭМ-блока reviews-slider, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .reviews-slider {
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  .flickity-viewport {
+    transition: height $transition-time;
+  }
+
+  .carousel-cell-image {
+    transition: opacity 0.4s;
+    opacity: 0;
+  }
+
+  .flickity-lazyloaded,
+  .flickity-lazyerror {
+    opacity: 1;
+  }
+
+  .slider-nav {
+    position: relative;
+    margin-top: 32px;
+
+    @media (min-width: $screen-xl) {
+      justify-content: flex-end;
+    }
+
+    &__btn {
+
+      &--prev {
+        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
+      }
+
+      &--next {
+        background-image: svg-load('../blocks/slider-nav/bg-img/slide-arrow-r.svg', fill=$main-color);
+      }
+    }
+
+    &__dot {
+      background-color: $main-color;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+      text-align: initial;
+    }
+  }
+
+  &__inner {
+    @include col(xs, 12);
+    @include col-offset(md, 2);
+    @include col(md, 8);
+    @include col-offset(xl, 0);
+    @include col(xl, 12);
+  }
 }

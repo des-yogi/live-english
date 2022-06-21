@@ -1,14 +1,75 @@
 <!--DEV
-
-Для использования этого файла как шаблона:
-
 @ @include('blocks/steps/steps.html')
 
-(Нужно убрать пробел между символами @)
-Подробнее: https://www.npmjs.com/package/gulp-file-include
-
-
-
-<div class="steps">content</div>
-
+style="background-image: url('/img/ease-step-bg.webp')"
+data-bg="/img/ease-step-bg.png"
+data-bg-webp="/img/ease-step-bg.webp"
 -->
+
+<section class="container  steps"
+  style="background-image: url('/img/ease-step-bg.webp')"
+  data-bg="/img/ease-step-bg.png"
+  data-bg-webp="/img/ease-step-bg.webp"
+>
+  <div class="steps__header">
+    <h2>Take the easy first step!</h2>
+    <p class="steps__intro">Make sure all your tasks are organized so you can set the priorities and focus on important.</p>
+  </div>
+
+  <ul class="row  list-nostyled">
+
+    <li class="steps__col">
+      <div class="steps__card">
+        <div class="steps__card-img">
+          <img src="img/ease-step-1.svg" alt="Step 1" width="306" height="221" loading="lazy" decoding="async">
+        </div>
+        <div class="steps__card-text">
+          <p>
+            <a href="#" class="secondary-color">Take the test</a> or call <br>
+            <a href="tel:+380443841654">044 384-16-54</a>
+          </p>
+        </div>
+      </div>
+    </li>
+
+    <li class="steps__col">
+      <div class="steps__card">
+        <div class="steps__card-img">
+          <img src="img/ease-step-2.svg" alt="Step 1" width="306" height="221" loading="lazy" decoding="async">
+        </div>
+        <div class="steps__card-text">
+          <p>
+            Attend a <a href="#" class="secondary-color">free trial lesson</a>
+          </p>
+        </div>
+      </div>
+    </li>
+
+    <li class="steps__col">
+      <div class="steps__card">
+        <div class="steps__card-img">
+          <img src="img/ease-step-3.svg" alt="Step 1" width="306" height="221" loading="lazy" decoding="async">
+        </div>
+        <div class="steps__card-text">
+          <p>
+            We select the most suitable program for you
+          </p>
+        </div>
+      </div>
+    </li>
+
+    <li class="steps__col">
+      <div class="steps__card">
+        <div class="steps__card-img">
+          <img src="img/ease-step-4.svg" alt="Step 1" width="306" height="221" loading="lazy" decoding="async">
+        </div>
+        <div class="steps__card-text">
+          <p>
+            You speak English fluently!
+          </p>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</section>

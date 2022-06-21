@@ -1,9 +1,62 @@
-// В этом файле должны быть стили для БЭМ-блока blog-card, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .blog-card {
+  color: $text-color;
 
   $block-name:                &; // #{$block-name}__element
 
+  .publishedon {
+    margin-bottom: 8px;
+  }
+
+  &__wrapper {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin-bottom: 96px;
+    background-color: $section-bg;
+
+    @media (min-width: $screen-xl) {
+      padding-top: 72px;
+      padding-bottom: 72px;
+      margin-bottom: 112px;
+    }
+  }
+
+  &__link-wrapper {
+    @include col-offset(xs, 2);
+    @include col(xs, 8);
+    @include col-offset(md, 3);
+    @include col(md, 6);
+    @include col-offset(xl, 8);
+    @include col(xl, 4);
+  }
+
+  &__more {
+    width: 100%;
+  }
+
+  &__title {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__caption.h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+  }
+
+  &__img {
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+    margin-top: 24px;
+  }
 }
