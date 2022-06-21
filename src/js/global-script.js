@@ -89,4 +89,7 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     // Options
     selector: '.b-lazy'
   });
+
+  const sticky = new Sticky('.page-header');
+  sticky.update();
 })();

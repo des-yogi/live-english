@@ -11,6 +11,14 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &__wrapper {
+    margin-bottom: 74px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 108px;
+    }
+  }
+
   &__inner {
     height: 100%;
     align-items: center;
@@ -48,7 +56,9 @@
 
   &__burger-col {
     @include col(xs, 4);
-    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 
     @media (min-width: $screen-xl) {
       display: none;
@@ -69,8 +79,6 @@
   }
 
   &__phones-item {
-    //display: inline-flex;
-    //align-items: center;
 
     & + & {
       margin-left: 24px;

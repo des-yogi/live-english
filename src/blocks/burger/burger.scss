@@ -6,19 +6,28 @@
   height: 42px;
   color: $secondary-color;
   background-color: inherit;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+  background-image: svg-load('../blocks/sprite-svg/svg/menu-icon.svg', fill=$secondary-color);
   border: 1px solid $border-color;
   border-radius: $border-radius;
   user-select: none;
   cursor: pointer;
+  transition: all 0.35s ease-in-out;
 
   &:hover,
   &:focus {
     color: $secondary-color--active;
   }
 
+  @media (min-width: $screen-xl) {
+    display: none;
+  }
+
   $block-name:                &; // #{$block-name}__element
 
   &--close {
-
+    background-image: svg-load('../blocks/sprite-svg/svg/close-icon.svg', fill=$secondary-color);
   }
 }

@@ -10,7 +10,9 @@
     adaptiveHeight: true,
     prevNextButtons: false,
     pageDots: false,
-    wrapAround: true //бесконечная прокрутка
+    dragThreshold: 30,
+    //autoPlay: 1500,
+    //wrapAround: true //бесконечная прокрутка
   });
 
   // elements

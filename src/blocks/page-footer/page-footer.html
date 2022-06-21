@@ -1,11 +1,87 @@
 <!--DEV
-
-Нужно убрать пробел между @-ами:
-
 @ @include('blocks/page-footer/page-footer.html')
-
 -->
 
-<footer class="page-footer">
-  page-footer
+<footer class="container  page-footer">
+  <div class="row">
+
+    <div class="page-footer__logo-col">
+      <a href="index.html" class="logo  logo--footer" title="Live English">
+        <img src="img/live-english-logo-footer.svg" alt="Live English logo" width="162" height="128" loading="lazy" decoding="async">
+      </a>
+      <p class="page-footer__slogan">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit. Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus, eget elementum dolor ullamcorper sodales ultrices eros.</p>
+    </div>
+
+    <div class="page-footer__menu-col">
+      <section class="page-footer__menu">
+        <h2 class="h5  page-footer__section-title">Menu</h2>
+
+        <nav class="page-footer__nav">
+          <ul class="list-nostyled  page-footer__nav-list">
+            <li class="page-footer__nav-item  active">
+              <a href="#" class="page-footer__link  page-footer__link--nav">Home</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">About the method</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">Programs and schedule</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">Reviews</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">Useful</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">News</a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="#" class="page-footer__link  page-footer__link--nav">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+      </section>
+    </div>
+
+    <div class="page-footer__contacts-col">
+      <section class="page-footer__contacts">
+        <h2 class="h5  page-footer__section-title">Contact Us</h2>
+
+        <ul class="list-nostyled  page-footer__contacts-list">
+          <li class="page-footer__contacts-item">
+            <a href="mailto:info@live-english.com.ua" class="page-footer__link">
+              info@live-english.com.ua
+            </a>
+          </li>
+          <li class="page-footer__contacts-item">
+            <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
+              +38 044 384 16 54
+            </a>
+          </li>
+          <li class="page-footer__contacts-item">
+            <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
+              +38 044 384 16 54
+            </a>
+          </li>
+          <li class="page-footer__contacts-item">
+            <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
+              +38 044 384 16 54
+            </a>
+          </li>
+        </ul>
+
+      </section>
+    </div>
+
+    <div class="page-footer__socials-col">
+      @@include('../../blocks/social-links/social-links.html')
+    </div>
+
+    <div class="page-footer__copyrights-col">
+      @@include('../../blocks/copyrights/copyrights.html')
+    </div>
+
+  </div>
 </footer>
