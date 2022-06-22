@@ -13,5 +13,10 @@
     @include col(md, 8);
     @include col-offset(xl, 0);
     @include col(xl, 8);
+
+    &--no-index {
+      @include col(xs, 12)
+      @include col-offset(md, 0);
+    }
   }
 }

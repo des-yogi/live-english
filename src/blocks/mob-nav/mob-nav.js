@@ -15,6 +15,7 @@
 
   const addOverflow = function() {
     body.style = 'overflow-y: hidden;'
+    // padding-right:6px;
   };
 
   const deleteOverflow = function() {
@@ -27,19 +28,19 @@
 
     if (!mobNav.classList.contains('mob-nav--open')) {
       mobNav.classList.add('mob-nav--open');
+      addOverflow();
       setBlur(btn);
       setFocus(menuLink);
       btn.setAttribute('aria-expanded', true);
       btn.classList.add('burger--close');
-      addOverflow();
     }
     else {
       mobNav.classList.remove('mob-nav--open');
+      deleteOverflow();
       setBlur(menuLink);
       setFocus(btn);
       btn.setAttribute('aria-expanded', false);
       btn.classList.remove('burger--close');
-      deleteOverflow();
     }
   };
 

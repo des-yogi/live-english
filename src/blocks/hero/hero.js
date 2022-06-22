@@ -2,8 +2,8 @@
   const utils = window.fizzyUIUtils;
   //console.log(utils);
   const container = document.querySelector('.hero');
+  if (!container) { return; }
   const elem = container.querySelector('.hero__carousel');
-  if (!elem && !container) { return; }
   const flkty = new Flickity( elem, {
     // options
     prevNextButtons: false,

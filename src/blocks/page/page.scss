@@ -337,6 +337,17 @@ a {
   }
 }
 
+.col-1-1-2 {
+  @include col(xs, 12);
+  @include col(md, 10);
+  @include col(xl, 6);
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
+}
+
 .col-1-2-3 {
   @include col(xs, 12);
   @include col(md, 6);

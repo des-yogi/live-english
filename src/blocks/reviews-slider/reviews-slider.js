@@ -2,8 +2,8 @@
   const utils = window.fizzyUIUtils;
   //console.log(utils);
   const container = document.querySelector('.reviews-slider');
+  if (!container) { return; }
   const elem = container.querySelector('.reviews-slider__inner');
-  if (!elem) { return; }
   const flkty = new Flickity( elem, {
     // options
     lazyLoad: true,

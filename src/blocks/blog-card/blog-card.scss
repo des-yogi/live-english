@@ -18,6 +18,17 @@
       padding-bottom: 72px;
       margin-bottom: 112px;
     }
+
+    &--nobgr {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      margin-bottom: calc(96px - 32px); //-32px
+      background-color: $body-bg;
+
+      @media (min-width: $screen-xl) {
+        margin-bottom: calc(112px - 40px);
+      }
+    }
   }
 
   &__link-wrapper {
@@ -27,6 +38,17 @@
     @include col(md, 6);
     @include col-offset(xl, 8);
     @include col(xl, 4);
+  }
+
+  &__col-intro {
+    @include col(xs, 12);
+    @include col(md, 10);
+    @include col(xl, 8);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
   }
 
   &__more {
@@ -39,6 +61,11 @@
     @media (min-width: $screen-xl) {
       margin-bottom: 40px;
     }
+  }
+
+  &__intro {
+    font-size: 20px;
+    color: $text-muted;
   }
 
   &__caption.h5 {

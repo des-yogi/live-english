@@ -1,0 +1,38 @@
+<!--DEV
+@ @include('blocks/trial-lesson-form/trial-lesson-form.html')
+-->
+
+<section class="trial-lesson-form">
+  <h2>Sign up for a trial lesson</h2>
+
+  <form class="trial-lesson-form__form" action="" method="post">
+    <label class="field-text">
+      <span class="field-text__name">Name</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="text" name="name" value="">
+        <span class="field-text__help-text  error-name">Ошибка</span>
+      </span>
+    </label>
+
+    <label class="field-text">
+      <span class="field-text__name">Phone</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="tel" name="tel" value="">
+        <span class="field-text__help-text  error-tel"></span>
+      </span>
+    </label>
+
+    <label class="field-text">
+      <span class="field-text__name">Email</span>
+      <span class="field-text__input-wrap">
+        <input class="field-text__input" type="email" name="email" value="">
+        <span class="field-text__help-text  error-email"></span>
+      </span>
+    </label>
+
+    <div class="field-actions">
+      <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+      <button class="btn" type="submit">Submit</button>
+    </div>
+  </form>
+</section>
