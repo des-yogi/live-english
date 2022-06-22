@@ -1,0 +1,62 @@
+.features-list {
+  padding: 16px;
+  border: 1px solid $border-color;
+  border-radius: $border-radius * 2;
+
+  @media (min-width: $screen-md) {
+    padding: 48px 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 48px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__wrapper {
+    margin-bottom: 96px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 112px;
+    }
+  }
+
+  &__neighbor-title {
+
+    @media (min-width: $screen-xl) {
+      padding-top: 48px + 1px;
+    }
+  }
+
+  &__list {
+    margin-top: 24px;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 40px;
+    padding-left: 56px;
+    font-weight: 600;
+
+    &::before {
+      display: block;
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-size: 40px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-image: svg-load('../blocks/features-list/bg-img/rocket-icon.svg');
+    }
+
+    & + & {
+      margin-top: 24px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Article for Live English</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <article class="container  article">
+
+          <div class="row">
+            <div class="article__col">
+
+              <header class="article__header">
+                <h1>Заголовок статьи 1 ур.</h1>
+                <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+              </header>
+
+              <div class="article__content">
+
+                <span class="article__img-wrapper"><img src="img/blog-1.jpg" alt="Alt text"></span>
+
+                <hr>
+
+                <h2>Подзаголовок статьи 2 ур.</h2>
+
+                <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы.</p>
+                <p>А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+
+                <blockquote class="blockquote">
+                  <p class="blockquote__quote">Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>
+                  <p class="blockquote__author">Katerina Paereli<span>Head of Marketing</span></p>
+                </blockquote>
+
+                <hr>
+
+                <h3>Подзаголовок статьи 3 ур.</h3>
+                <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+
+                <span class="article__img-wrapper"><img src="img/blog-2.jpg" alt="Alt text"></span>
+
+                <hr>
+
+                <h4>Подзаголовок статьи 4 ур.</h4>
+                <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+
+                <div class="table-mobile-scroll">
+                  <table class="table">
+                    <caption>Таблица</caption>
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>1</th>
+                        <th>2</th>
+                        <th>3</th>
+                        <th>4</th>
+                        <th>5</th>
+                        <th>6</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Камера 1</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Нема</td>
+                        <td>435</td>
+                        <td>435</td>
+                        <td>not presented</td>
+                      </tr>
+                      <tr>
+                        <td>Камера 2</td>
+                        <td>—</td>
+                        <td>+</td>
+                        <td>Нема</td>
+                        <td>535</td>
+                        <td>535</td>
+                        <td>not presented</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <ol>
+                  <li>Текст списка 01</li>
+                  <li>Текст списка 02</li>
+                  <li>Текст списка 03</li>
+                  <li>Текст списка 04</li>
+                  <li>Текст списка 05</li>
+                </ol>
+
+                <ul>
+                  <li>Текст списка 01</li>
+                  <li>Текст списка 02</li>
+                  <li>Текст списка 03</li>
+                  <li>Текст списка 04</li>
+                  <li>Текст списка 05</li>
+                </ul>
+
+                <hr>
+
+                <h5>Подзаголовок статьи 5 ур.</h5>
+                <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Большого напоивший толку эта заголовок! За не, жаренные! Раз назад но предупреждал снова. Рыбного собрал знаках заманивший вопроса свое то, наш, за все скатился, текстами lorem. Все, своих, правилами.</p>
+
+              </div>
+
+              <div>
+                <h2>Faq</h2>
+                <p>The projects that we develop, implement and maintain are always part of the company's existing system.</p>
+
+                @@include('blocks/faq-block/faq-block.html')
+              </div>
+
+            </div>
+          </div>
+
+        </article>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

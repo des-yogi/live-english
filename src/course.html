@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Course English for Kids</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <div class="container  course">
+
+          <article>
+
+            <div class="course__top">
+              <div class="row">
+
+                <div class="course__main-col">
+                  <header class="course__header">
+                    <span class="course__icon" role="presentation" aria-hidden="true">
+                      <img src="img/bonnet-icon.svg" alt="Alt text" width="48" height="48">
+                    </span>
+                    <h1>English for Kids</h1>
+                    <p class="course__descr">Special program for elementary school students</p>
+                    <p class="course__intro">Today's world is all about globalization and the English language. It's time to keep up with the times!</p>
+                  </header>
+                </div>
+
+                <div class="course__aside-col">
+                  <section class="course__aside-info  course__aside-info--border">
+                    <h2 class="h4">Course Information</h2>
+                    <p><span>Schedule:</span> 2 lessons per week, 60 minutes each</p>
+                    <p><span>Group:</span> 4-6 people</p>
+                    <h3 class="h5">Cost of training</h3>
+                    <p><span>1 training module:</span> 1400 UAH</p>
+                    <p><span>Module duration:</span> 5 weeks</p>
+                    <p><span style="color:#e3373a;">The trial lesson is free!</span></p>
+                  </section>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="row">
+
+              <div class="course__main-col">
+                <h2 class="course__main-subtitle">English for Elementary School Children</h2>
+
+                <p>English is the language of international trade, culture and tourism. In addition, it is the language of the Internet, where the English-speaking segment is much wider and richer. So if you know English you can communicate with people in other countries easily when you travel, you can learn a lot from the English speaking culture and you can simply keep up with all the latest news.</p>
+                <p>However, English for beginners always seems to be difficult and almost impossible obstacle, so for a good result it is necessary to find such courses, which would be most suitable for learning from scratch.</p>
+                <p>You need a methodology that would not only give new knowledge, but also explain them as much as possible, making many analogies. It is also important to un derstand that English is a different culture, and therefore it is important to learn not only the language itself, but also to immerse yourself in this culture. Live English courses for beginners will help you do just that!</p>
+
+                <hr>
+
+                <h3>H3</h3>
+                <p>Проекты, которые мы разрабатываем, внедряем и сопровождаем всегда являются частью существующей в компании системы. А результаты нашей работы привязываются к результатам работы наших клиентов. Только конструктивные и проверенные технологии - кредо нашей работы!</p>
+
+                <ul>
+                  <li>Элемент списка 01</li>
+                  <li>Элемент списка 02</li>
+                  <li>Элемент списка 03</li>
+                  <li>Элемент списка 04</li>
+                  <li>Элемент списка 05</li>
+                </ul>
+
+                <hr>
+
+                <section>
+                  <h2>FAQ</h2>
+                  <p>The projects that we develop, implement and maintain are always part of the company's existing system.</p>
+
+                  @@include('blocks/faq-block/faq-block.html')
+                </section>
+
+              </div>
+
+              <div class="course__aside-col">
+                <div class="course__aside">
+                  @@include('blocks/trial-lesson-form/trial-lesson-form.html')
+
+                  @@include('blocks/find-level-block/find-level-block.html')
+                </div>
+              </div>
+
+            </div>
+
+
+          </article>
+
+        </div>
+
+        <!-- @@include('blocks/seo-text/seo-text.html', {
+          "addClass": "seo-text__col--no-index"
+        }) -->
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Home page for Live English</title>
+  <title>News</title>
   @@include('_include/page_head.html')
 </head>
 
@@ -15,7 +15,9 @@
     <div class="page__content">
       @@include('blocks/page-header/page-header.html')
 
-      @@include('blocks/breadcrumbs/breadcrumbs.html')
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": ""
+      })
 
       <main class="main">
 

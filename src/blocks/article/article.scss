@@ -1,0 +1,39 @@
+.article {
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 9);
+  }
+
+  &__header,
+  &__content {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img-wrapper {
+    display: block;
+    width: 100%;
+    margin: 32px 0;
+    overflow: hidden;
+    border-radius: $border-radius * 2;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

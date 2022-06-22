@@ -1,7 +1,7 @@
 .breadcrumbs {
   padding-top: 24px;
-  margin-bottom: 40px;
   margin-top: 74px;
+  margin-bottom: 40px;
 
   @media (min-width: $screen-md) {
     padding-top: 40px;
@@ -13,6 +13,17 @@
   }
 
   $block-name:                &;  // #{$block-name}__element
+
+  &__col {
+    @include col(xs, 12);
+
+    &--article {
+      @include col-offset(md, 1);
+      @include col(md, 10);
+      @include col-offset(xl, 0);
+      @include col(xl, 9);
+    }
+  }
 
   &__list {
     display: inline-flex;

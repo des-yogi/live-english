@@ -40,7 +40,13 @@
     "messenger-links": [],
     "slider-nav": [],
     "mob-nav": [],
-    "btn-group": []
+    "btn-group": [],
+    "article": [],
+    "features-list": [],
+    "course": [],
+    "program-links": [],
+    "trial-lesson-form": [],
+    "find-level-block": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
