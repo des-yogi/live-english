@@ -3,21 +3,21 @@
 -->
 
 <section class="trial-lesson-form">
-  <h2>Sign up for a trial lesson</h2>
+  <h2 class="trial-lesson-form__title">Sign up for a trial lesson</h2>
 
   <form class="trial-lesson-form__form" action="" method="post">
     <label class="field-text">
       <span class="field-text__name">Name</span>
       <span class="field-text__input-wrap">
         <input class="field-text__input" type="text" name="name" value="">
-        <span class="field-text__help-text  error-name">Ошибка</span>
+        <span class="field-text__help-text  error-name"></span>
       </span>
     </label>
 
     <label class="field-text">
       <span class="field-text__name">Phone</span>
       <span class="field-text__input-wrap">
-        <input class="field-text__input" type="tel" name="tel" value="">
+        <input class="field-text__input" type="tel" name="tel" value="" placeholder="+380">
         <span class="field-text__help-text  error-tel"></span>
       </span>
     </label>
@@ -30,9 +30,9 @@
       </span>
     </label>
 
-    <div class="field-actions">
+    <div class="field-actions  trial-lesson-form__actions">
       <!-- <div class="field-actions__text">* — обязательные поля</div> -->
-      <button class="btn" type="submit">Submit</button>
+      <button class="btn  trial-lesson-form__submit" type="submit">Submit</button>
     </div>
   </form>
 </section>

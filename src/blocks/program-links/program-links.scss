@@ -1,9 +1,65 @@
-// В этом файле должны быть стили для БЭМ-блока program-links, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .program-links {
+  margin-bottom: 96px - 24px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px - 24px;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &__title {
+    margin-bottom: 24px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(lg, 6);
+  }
+
+  &__item,
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    justify-content: space-between;
+    padding: 24px;
+    margin-bottom: 24px;
+    color: inherit;
+    background-color: $white;
+    box-shadow: $shadow;
+    border-radius: $border-radius * 2;
+
+    &:hover,
+    &:focus {
+
+      #{$block-name}__fake-link {
+        background-color: $main-color--active;
+      }
+    }
+  }
+
+  &__inner {
+
+    img {
+      margin-right: 24px;
+    }
+  }
+
+  &__label {
+    margin: 0 !important;
+    color: inherit;
+  }
+
+  &__fake-link {
+
+    @media (max-width: $screen-md - 1) {
+      display: none;
+    }
+  }
 }

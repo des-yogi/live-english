@@ -1,0 +1,10 @@
+.logo-slider {
+  margin-bottom: 32px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 40px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+}

@@ -1,0 +1,115 @@
+.review-card-vert {
+  position: relative;
+  padding: 58px 16px 24px;
+  background-color: $white;
+  box-shadow: $shadow;
+
+  -webkit-column-break-inside: avoid;
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+
+  @media (min-width: $screen-md) {
+    padding: 58px 24px 24px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 58px 48px 40px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    //z-index: 1;
+    left: 16px;
+    top: -26px;
+    width: 52px;
+    height: 52px;
+    background-color: $main-color;
+    background-size: 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: svg-load('../blocks/sprite-svg/svg/quotes-icon.svg', fill=$white);
+    border-radius: $border-radius;
+    //box-shadow: 0 8px 18px -8px rgba(99, 102, 241, 0.9);
+  }
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__main {
+    margin-top: 32px + 26px;
+    margin-bottom: 96px - 58px;
+
+    @media (min-width: $screen-xl) {
+      margin-top: 40px + 26px;
+      margin-bottom: 112px - 66px;
+    }
+  }
+
+  &__intro {
+    font-size: 20px;
+    color: $text-muted;
+  }
+
+  &__content {
+    //columns: 2;
+    //column-gap: 24px;
+  }
+
+  &__col {
+    //@include col(xs, 12);
+    //@include col(lg, 6);
+    margin-bottom: 58px;
+
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 66px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    flex: 0 0;
+    flex-basis: 84px;
+    width: 84px;
+    height: 84px;
+    margin-right: 24px;
+    border-radius: $border-radius;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__caption {
+    flex: 0 1;
+    flex-basis: auto;
+    margin: 0 !important;
+  }
+
+  &__position {
+    display: block;
+    margin-top: 4px;
+    font-size: $font-size-sm;
+    font-weight: 400;
+    color: $text-muted;
+  }
+
+  &__text {
+
+  }
+}

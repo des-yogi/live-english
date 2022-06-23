@@ -363,3 +363,13 @@ a {
   display: block;
   color: $text-muted;
 }
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+  width: 100%;
+
+  @media (min-width: $screen-lg) {
+    width: calc(50% - 12px);
+  }
+}

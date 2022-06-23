@@ -1,0 +1,21 @@
+<!--DEV
+@ @include('blocks/review-card-vert/review-card-vert.html')
+-->
+<article class="review-card-vert">
+  <div class="review-card-vert__author">
+    <div class="embed-responsive embed-responsive--1-1  review-card-vert__img">
+      <picture>
+        <source srcset="img/portret.webp" type="image/webp">
+        <img src="img/portret.jpg" alt="Alt text" width="84" height="84" loading="lazy" decoding="async">
+      </picture>
+    </div>
+    <h2 class="h5  review-card-vert__caption">
+      <span class="visually-hidden">Feedback from</span>
+      Katerina Paereli
+      <span class="review-card-vert__position">Development Director of LLC "Impel Griffin Group</span>
+    </h2>
+  </div>
+  <div class="review-card-vert__text">
+    @@text
+  </div>
+</article>
