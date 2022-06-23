@@ -15,6 +15,14 @@
     }
   }
 
+  &__article {
+    margin-bottom: 96px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 112px;
+    }
+  }
+
   &__main-col {
     @include col(xs, 12);
     @include col-offset(md, 1);
@@ -29,6 +37,13 @@
     @include col(md, 10);
     @include col-offset(xl, 1);
     @include col(xl, 5);
+
+    &--widgets {
+
+      @media (max-width: $screen-xl - 1) {
+        margin-top: 32px;
+      }
+    }
   }
 
   &__header {

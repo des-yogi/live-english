@@ -1,5 +1,6 @@
 .page-header {
-  position: relative;
+  position: fixed;
+  top: 0;
   z-index: 1;
   height: 74px;
   background-color: $white;
@@ -11,13 +12,13 @@
 
   $block-name:                &; // #{$block-name}__element
 
-  &__wrapper {
-    margin-bottom: 74px;
+  // &__wrapper {
+  //   margin-bottom: 74px;
 
-    @media (min-width: $screen-xl) {
-      margin-bottom: 108px;
-    }
-  }
+  //   @media (min-width: $screen-xl) {
+  //     margin-bottom: 108px;
+  //   }
+  // }
 
   &__inner {
     height: 100%;

@@ -1,0 +1,93 @@
+.contacts {
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+
+  }
+
+  &__intro {
+    font-size: 20px;
+    color: $text-muted;
+  }
+
+  &__contact-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__map-col {
+    @include col(xs, 12);
+    @include col(xl, 6);
+  }
+
+  &__item-col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+
+    .social-links {
+      justify-content: initial;
+    }
+
+    .social-links__item {
+      margin-bottom: 16px !important;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    font-size: $font-size-sm;
+    font-weight: 600;
+    color: $text-muted;
+  }
+
+  &__item-text {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: inherit;
+    font-weight: 600;
+
+    a {
+      color: inherit;
+
+      &:hover,
+      &:focus {
+        color: $main-color;
+      }
+    }
+  }
+
+  &__map {
+    height: 350px;
+    overflow: hidden;
+    border-radius: $border-radius;
+    box-shadow: $shadow;
+
+    // @media (min-width: $screen-md) {
+    //   height: 400px;
+    // }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

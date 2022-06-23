@@ -46,28 +46,41 @@
     </div>
 
     <div class="page-footer__contacts-col">
-      <section class="page-footer__contacts">
+      <section class="page-footer__contacts" itemscope itemtype="https://schema.org/EducationalOrganization">
+        <meta itemprop="name" content="Live English">
+        <meta itemprop="description" content="English courses for everyone">
+        <meta itemprop="url" content="https://mental-health.academy/">
+        <meta itemprop="image" content="https://mental-health.academy/assets/img/hero-img.jpg">
+        <meta itemprop="logo" content="https://mental-health.academy/assets/images/mental-health-academy-logo.svg">
+
         <h2 class="h5  page-footer__section-title">Contact Us</h2>
+
+        <div class="visually-hidden" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+          <span itemprop="streetAddress">ул. Николая Василенко, 21 (3 эт.)</span>
+          <span itemprop="addressLocality">г. Киев</span>,
+          <span itemprop="postalCode">03067</span>
+          <span itemprop="addressCountry">Ukraine</span>
+        </div>
 
         <ul class="list-nostyled  page-footer__contacts-list">
           <li class="page-footer__contacts-item">
             <a href="mailto:info@live-english.com.ua" class="page-footer__link">
-              info@live-english.com.ua
+              <span itemprop="email">info@live-english.com.ua</span>
             </a>
           </li>
           <li class="page-footer__contacts-item">
             <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
-              +38 044 384 16 54
+              <span itemprop="telephone">+38 044 384 16 54</span>
             </a>
           </li>
           <li class="page-footer__contacts-item">
             <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
-              +38 044 384 16 54
+              <span itemprop="telephone">+38 044 384 16 54</span>
             </a>
           </li>
           <li class="page-footer__contacts-item">
             <a href="tel:+380443841654" class="page-footer__link  page-footer__link--nav">
-              +38 044 384 16 54
+              <span itemprop="telephone">+38 044 384 16 54</span>
             </a>
           </li>
         </ul>

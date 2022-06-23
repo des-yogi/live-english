@@ -1,9 +1,40 @@
-// В этом файле должны быть стили для БЭМ-блока trial-lesson-form, его элементов, 
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
 .trial-lesson-form {
+  position: relative;
+  padding: 40px 0;
+  margin-bottom: 32px;
+  background-color: $section-bg;
+
+  @media (min-width: $screen-md) {
+    padding: 40px;
+    border-radius: $border-radius * 2;
+  }
 
   $block-name:                &; // #{$block-name}__element
 
+  &::after {
+
+    @media (max-width: $screen-md - 1) {
+      display: block;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: -16px;
+      right: -16px;
+      background-color: $section-bg;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__actions {
+    margin-top: 40px;
+  }
+
+  &__submit {
+    width: 100%;
+  }
 }

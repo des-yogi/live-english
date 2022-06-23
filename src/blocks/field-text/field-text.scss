@@ -1,25 +1,9 @@
-// В этом файле должны быть стили для БЭМ-блока field-text, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$gray-lighter:                hsl(0, 0%, 80%) !default;
-$border-color:                hsl(0, 0%, 60%) !default;
-
-$text-color--muted:           hsl(0, 0%, 50%) !default;
-
-$line-height:                 1.375em !default;
-
-$field-padding-vertical:      0.3em !default;
-$field-padding-horizontal:    0.7em !default;
-
-$border-radius:               3px !default;
-
 .field-text {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  margin-bottom: 24px;
 
   &__name {
     @include field-name;
@@ -33,13 +17,12 @@ $border-radius:               3px !default;
     display: inline-block;
     vertical-align: middle;
     width: 100%;
-    // height: 2.125em;
     padding: $field-padding-vertical  $field-padding-horizontal;
     margin: 0;
     line-height: $line-height;
-    font-size: 1em;
+    font-size: $font-size;
     font-family: inherit;
-    background-color: #fff;
+    background-color: $white;
     border: 1px solid $border-color;
     border-radius: $border-radius;
     appearance: textfield;
@@ -51,7 +34,11 @@ $border-radius:               3px !default;
     &[disabled],
     &[readonly] {
       cursor: default;
-      background-color: $gray-lighter;
+      //background-color: $gray-lighter;
+
+      &::placeholder {
+        opacity: 0.5;
+      }
     }
 
     &[type='search']::-webkit-search-cancel-button,
@@ -70,7 +57,7 @@ $border-radius:               3px !default;
     }
 
     &::placeholder {
-      color: $text-color--muted;
+      color: $text-muted;
       opacity: 1;
     }
 

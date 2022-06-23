@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Contacts</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <div class="container  md-narrow-layout  contacts">
+
+          <div class="row">
+            <div class="md-narrow-layout__col">
+
+              <div class="contacts__header">
+                <h1 class="contacts__title">Contacts</h1>
+                <p class="contacts__intro">Interesting and useful thematic articles on the English language and the process of learning it</p>
+              </div>
+
+              <div class="row">
+
+                <div class="contacts__contact-col">
+
+
+                  <div class="row">
+
+                    <section class="contacts__item-col">
+                      <h2 class="contacts__item-title">Address</h2>
+                      <p class="contacts__item-text">
+                        <span>03067</span>
+                        <span>г. Киев</span>,
+                        <span>ул. Николая Василенко, 21 (3 эт.)</span>
+                      </p>
+                    </section>
+
+                    <section class="contacts__item-col">
+                      <h2 class="contacts__item-title">Email</h2>
+                      <p class="contacts__item-text">
+                        <a href="mailto:info@live-english.com.ua">
+                          <span>info@live-english.com.ua</span>
+                        </a>
+                      </p>
+                    </section>
+
+                    <section class="contacts__item-col">
+                      <h2 class="contacts__item-title">Phone</h2>
+                      <p class="contacts__item-text">
+                        <a href="tel:+380443841654">
+                          <span>+38 044 384 16 54</span>
+                        </a>
+                      </p>
+                      <p class="contacts__item-text">
+                        <a href="tel:+380443841654">
+                          <span>+38 044 384 16 54</span>
+                        </a>
+                      </p>
+                      <p class="contacts__item-text">
+                        <a href="tel:+380443841654">
+                          <span>+38 044 384 16 54</span>
+                        </a>
+                      </p>
+                    </section>
+
+                    <section class="contacts__item-col">
+                      <h2 class="contacts__item-title">Messengers & Social Net</h2>
+                      @@include('blocks/social-links/social-links.html')
+                    </section>
+
+                  </div>
+
+                </div>
+
+                <div class="contacts__map-col">
+                  <div class="contacts__map">
+                    <iframe title="Заголовок карты" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.976602197445!2d30.422033051479048!3d50.44153647937334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc11288482db%3A0x2c58932f77034bf0!2z0YPQuy4g0J3QuNC60L7Qu9Cw0Y8g0JLQsNGB0LjQu9C10L3QutC-LCAyMSwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1656001955269!5m2!1sru!2sua"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

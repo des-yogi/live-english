@@ -46,7 +46,11 @@
     "course": [],
     "program-links": [],
     "trial-lesson-form": [],
-    "find-level-block": []
+    "find-level-block": [],
+    "md-narrow-layout": [],
+    "logo-slider": [],
+    "review-card-vert": [],
+    "contacts": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

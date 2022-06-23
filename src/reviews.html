@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reviews</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <div class="container  md-narrow-layout  review-card-vert__header">
+          <div class="row">
+            <div class="md-narrow-layout__col">
+              <h1 class="review-card-vert__title">Reviews</h1>
+              <p class="review-card-vert__intro">Interesting and useful thematic articles on the English language and the process of learning it</p>
+            </div>
+          </div>
+        </div>
+
+        @@include('blocks/logo-slider/logo-slider.html')
+
+        <div class="container  md-narrow-layout  review-card-vert__main">
+          <div class="row">
+            <div class="md-narrow-layout__col">
+
+              <ul class="list-nostyled  review-card-vert__content  grid">
+
+                <li class="grid-sizer"></li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "1. <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>"
+                  })
+                </li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "2. <p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p><p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>"
+                  })
+                </li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "<p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>"
+                  })
+                </li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "<p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p><p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted.</p>"
+                  })
+                </li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "<p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p>"
+                  })
+                </li>
+
+                <li class="review-card-vert__col  grid-item">
+                  @@include('blocks/review-card-vert/review-card-vert.html', {
+                    "text": "<p>I would like to express my gratitude to my English tutor Natalia Nikitina for her high level of language teaching, individual approach and warmth in communication.</p><p>Besides the professionalism of Natalia as a teacher and a specialist in her field, I want to note her individual approach and her ability to motivate. Depending on the specific goals and objectives, the training program is adjusted. The learning process itself is friendly and positive. Thanks to the knowledge I received I was able to significantly improve my English in a short time, which in turn had a positive impact on my career.</p>"
+                  })
+                </li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+
+        @@include('blocks/seo-text/seo-text.html', {
+          "addClass": "seo-text__col--no-index"
+        })
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+  </div>
+
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script>
+    (function(){
+      const elem = document.querySelector('.grid');
+      if (!elem) {return;}
+      const msnry = new Masonry( elem, {
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        gutter: 24,
+        horizontalOrder: true,
+        percentPosition: true
+      });
+    }());
+  </script>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>
