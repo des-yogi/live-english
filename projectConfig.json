@@ -50,7 +50,12 @@
     "md-narrow-layout": [],
     "logo-slider": [],
     "review-card-vert": [],
-    "contacts": []
+    "contacts": [],
+    "test": [],
+    "review-page": [],
+    "trial-lesson-modal": [],
+    "ask-question-modal": [],
+    "p-404": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

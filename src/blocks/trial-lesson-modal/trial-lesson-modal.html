@@ -1,0 +1,49 @@
+<!--DEV
+@ @include('blocks/trial-lesson-modal/trial-lesson-modal.html')
+<div class="trial-lesson-modal">content</div>
+-->
+
+<div class="modal fade" id="trialLessonModal" tabindex="-1" aria-labelledby="trialLessonModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="h4 modal-title" id="trialLessonModalLabel">Sign up for a trial lesson</h5>
+        <button type="button" class="modal__close" data-dismiss="modal" aria-label="Close">
+          <svg width="24" height="24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#close-icon"></use></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="trial-lesson-form__form" action="" method="post">
+          <label class="field-text">
+            <span class="field-text__name">Name</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="text" name="name" value="">
+              <span class="field-text__help-text  error-name"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__name">Phone</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="tel" name="tel" value="" placeholder="+380">
+              <span class="field-text__help-text  error-tel"></span>
+            </span>
+          </label>
+
+          <label class="field-text">
+            <span class="field-text__name">Email</span>
+            <span class="field-text__input-wrap">
+              <input class="field-text__input" type="email" name="email" value="">
+              <span class="field-text__help-text  error-email"></span>
+            </span>
+          </label>
+
+          <div class="field-actions  trial-lesson-form__actions">
+            <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+            <button class="btn  trial-lesson-form__submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

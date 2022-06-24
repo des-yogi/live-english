@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Error 404: Page not found</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      <main class="main">
+
+        <div class="container  md-narrow-layout  p-404">
+          <div class="row">
+            <div class="md-narrow-layout__col">
+              <div class="row">
+                <div class="p-404__text-col">
+                  <div class="p-404__text">
+                    <h1 class="p-404__title">
+                      <span class="p-404__oops">Oops…</span>
+                      <span class="p-404__error">The page you asked for, <br> could not be found</span>
+                    </h1>
+                    <a href="index.html" class="btn  btn--red"><span>Go to homepage</span></a>
+                  </div>
+                </div>
+
+                <div class="p-404__img-col">
+                  <div class="embed-responsive embed-responsive--4-3  p-404__img">
+                    <picture>
+                      <source srcset="img/blog-1.webp" type="image/webp">
+                      <img src="img/blog-1.jpg" alt="Error 404 illustration" width="690" height="517" loading="lazy" decoding="async">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+.p-404 {
+  padding-top: 40px;
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__text-col {
+    @include col(xs, 12);
+    @include col(xl, 4);
+
+    @media (max-width: $screen-xl - 1) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__img-col {
+    @include col(xs, 12);
+    @include col-offset(xl, 1);
+    @include col(xl, 7);
+  }
+
+  &__title {
+    line-height: unset;
+    margin-bottom: 32px;
+
+    @media (min-width: $screen-xl) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__img {
+    max-width: 690px;
+    max-height: 516px;
+    margin: 0 auto;
+    background-color: $section-bg;
+    border-radius: $border-radius * 2;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__text {
+
+    @media (max-width: $screen-xl - 1) {
+      text-align: center;
+    }
+
+    @media (min-width: $screen-xl) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+    }
+  }
+
+  &__oops {
+    display: block;
+    margin-bottom: 24px;
+    color: $secondary-color;
+  }
+
+  &__error {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+  }
+}

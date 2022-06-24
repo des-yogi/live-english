@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test result</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <div class="container  md-narrow-layout  test  test--result">
+
+          <div class="row">
+            <div class="md-narrow-layout__col">
+
+              <div class="row">
+
+                <section class="test__form-col">
+
+                  <div class="test__header">
+                    <h1 class="test__title">Test result (Review)</h1>
+                    <p class="test__intro">After checking the test, we will contact you and let you know the result</p>
+                  </div>
+
+                  <div class="test__body">
+                    <p class="h4">Thank you for taking the time and paying due attention to this test. The results will help determine your level of English proficiency.</p>
+
+                    <div>
+                      <p class="h5">There are such levels:</p>
+                      <ol>
+                        <li>Beginner - Zero</li>
+                        <li>Elementary</li>
+                        <li>Pre-Intermediate Below Average</li>
+                        <li>Intermediate</li>
+                        <li>Upper-Intermediate</li>
+                        <li>Advanced</li>
+                      </ol>
+                      <p class="h5">
+                        You can read more in the article <br>
+                        <a href="#">English Proficiency Level</a>
+                      </p>
+                    </div>
+
+                  </div>
+
+                </section>
+
+                <div class="test__img-col">
+                  <div class="test__img" role="presentation">
+                    <picture>
+                      <source data-srcset="img/hero-art.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/hero-art.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="636" height="532">
+                    </picture>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+
+    @@include('blocks/trial-lesson-modal/trial-lesson-modal.html')
+    @@include('blocks/ask-question-modal/ask-question-modal.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

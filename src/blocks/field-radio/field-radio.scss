@@ -1,19 +1,13 @@
-// В этом файле должны быть стили для БЭМ-блока field-radio, его элементов,
-// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
-// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
-
-$line-height:                 1.375em !default;
-
 .field-radio {
 
   $block-name:                &; // #{$block-name}__element
 
   display: block;
-  margin-bottom: ($line-height / 2);
+  //margin-bottom: ($line-height / 2);
 
   &__title {
     display: block;
-    font-weight: 700;
+    font-weight: 600;
     line-height: $line-height;
     margin-bottom: 0.4em;
   }
@@ -21,42 +15,64 @@ $line-height:                 1.375em !default;
   &__input-wrap {
 
     & + & {
-      margin-top: ($line-height / 2);
+      margin-top: 16px;
     }
   }
 
   &__name {
     position: relative;
     display: inline-block;
-    padding-left: 1.5em;
-    margin-right: 0.6em;
+    vertical-align: top;
+    padding-left: 32px;
     font-weight: 400;
     line-height: $line-height;
+    cursor: pointer;
+
+    &:hover {
+
+      #{$block-name}__name-text {
+        //color: $secondary-color;
+        color: $main-color;
+      }
+    }
   }
 
   &__name-text {
+    display: inline-block;
 
     // своя радиокнопка с картинкой
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-image: svg-load('../blocks/field-radio/bg-img/radio-icon.svg');
+      background-size: 100%;
+      outline: none;
+    }
 
-    // &:before {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0.1em;
-    //   left: 0;
-    //   width: 14px;
-    //   height: 14px;
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton.svg');
-    //   background-size: 100%;
-    // }
-    // @at-root input:checked ~ &:before {
-    //   background-image: svg-load('../blocks/field-radio/img_to_bg/radiobutton--checked.svg');
-    // }
+    @at-root input:checked ~ &::before {
+      background-image: svg-load('../blocks/field-radio/bg-img/radio-checked-icon.svg');
+    }
 
-    // / своя радиокнопка с картинкой
+    @at-root input:disabled ~ & {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
 
     // своя радиокнопка без картинки
 
-    &:before {
+    /* &::before {
       content: '';
       position: absolute;
       top: 0.1em;
@@ -65,13 +81,19 @@ $line-height:                 1.375em !default;
       height: 14px;
       border: 2px solid currentColor;
       border-radius: 50%;
+    } */
+
+    // @at-root input:focus ~ &::before {
+    //   @include field-focus;
+    // }
+
+    @at-root input:focus ~ span {
+      //color: $secondary-color;
+      color: $main-color;
+      //outline: 1px solid $main-color !important;
     }
 
-    @at-root input:focus ~ &:before {
-      @include field-focus;
-    }
-
-    &:after {
+    /* &::after {
       content: '';
       position: absolute;
       top: calc(0.1em + 4px);
@@ -86,9 +108,7 @@ $line-height:                 1.375em !default;
       @at-root input:checked ~ & {
         opacity: 1;
       }
-    }
-
-    // / своя радиокнопка без картинки
+    } */
   }
 
   &__input {
@@ -99,17 +119,17 @@ $line-height:                 1.375em !default;
     margin: 0;
     transform: translateY(-50%);
 
-    &:focus,
-    &:active {
-      @include field-focus;
-    }
+    // &:focus,
+    // &:active {
+    //   @include field-focus;
+    // }
 
     // сокрытие инпута в случае использования своей радиокнопки
     opacity: 0;
   }
 
   &__help-text-wrap {
-    padding-left: 1.5em;
+    padding-left: 32px;
   }
 
   &__help-text {

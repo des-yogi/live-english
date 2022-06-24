@@ -1,4 +1,5 @@
 .blog-card {
+  text-decoration: none !important;
   color: $text-color;
 
   $block-name:                &; // #{$block-name}__element

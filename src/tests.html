@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Test page</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": "breadcrumbs__col--article"
+      })
+
+      <main class="main">
+
+        <div class="container  md-narrow-layout  test">
+
+          <div class="row">
+            <div class="md-narrow-layout__col">
+
+
+              <div class="row">
+
+                <section class="test__form-col">
+
+                  <div class="test__header">
+                    <h1 class="test__title">Test</h1>
+                    <p class="test__intro">Take the English Language Test to determine your level. We wish you success!</p>
+                  </div>
+
+                  <div class="test__body">
+                    <p class="h4">Recommendation</p>
+                    <p>There is no time limit, but try to allow up to 40 minutes for the test. Don't forget to leave your contact information so that we can contact you with the result.</p>
+
+                    <h2 id="test-form-title" class="visually-hidden">Форма с блоками вопросов для проведения тестирования</h2>
+
+                    <form id="test-form" class="test__form" action="" method="post" aria-labelledby="test-form-title">
+
+                      <div class="row">
+
+                        <div class="test__form-inner-col">
+                          <fieldset class="test__form-fieldset">
+                            <legend class="test__form-legend">1. I haven't got…</legend>
+
+                            <div class="field-radio">
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-1" value="" checked>
+                                  <span class="field-radio__name-text"><span>A.</span>no money.</span>
+                                </label>
+                                <div class="field-radio__help-text-wrap">
+                                  <div class="field-radio__help-text"></div>
+                                </div>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-1" value="" disabled>
+                                  <span class="field-radio__name-text"><span>B.</span>money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-1" value="">
+                                  <span class="field-radio__name-text"><span>c.</span>any money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-1" value="">
+                                  <span class="field-radio__name-text"><span>d.</span>some money.</span>
+                                </label>
+                              </div>
+                            </div>
+
+                          </fieldset>
+                        </div>
+
+                        <div class="test__form-inner-col">
+                          <fieldset class="test__form-fieldset">
+                            <legend class="test__form-legend">2. I haven't got…</legend>
+                            <div class="field-radio">
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-2" checked>
+                                  <span class="field-radio__name-text"><span>A.</span>no money.</span>
+                                </label>
+                                <div class="field-radio__help-text-wrap">
+                                  <div class="field-radio__help-text"></div>
+                                </div>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-2">
+                                  <span class="field-radio__name-text"><span>B.</span>money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-2">
+                                  <span class="field-radio__name-text"><span>c.</span>any money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-2">
+                                  <span class="field-radio__name-text"><span>d.</span>some money.</span>
+                                </label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="test__form-inner-col">
+                          <fieldset class="test__form-fieldset">
+                            <legend class="test__form-legend">3. I haven't got…</legend>
+                            <div class="field-radio">
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-3" checked>
+                                  <span class="field-radio__name-text"><span>A.</span>no money.</span>
+                                </label>
+                                <div class="field-radio__help-text-wrap">
+                                  <div class="field-radio__help-text"></div>
+                                </div>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-3">
+                                  <span class="field-radio__name-text"><span>B.</span>money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-3">
+                                  <span class="field-radio__name-text"><span>c.</span>any money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-3">
+                                  <span class="field-radio__name-text"><span>d.</span>some money.</span>
+                                </label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                        <div class="test__form-inner-col">
+                          <fieldset class="test__form-fieldset">
+                            <legend class="test__form-legend">4. I haven't got…</legend>
+                            <div class="field-radio">
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-4" checked>
+                                  <span class="field-radio__name-text"><span>A.</span>no money.</span>
+                                </label>
+                                <div class="field-radio__help-text-wrap">
+                                  <div class="field-radio__help-text"></div>
+                                </div>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-4">
+                                  <span class="field-radio__name-text"><span>B.</span>money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-4">
+                                  <span class="field-radio__name-text"><span>c.</span>any money.</span>
+                                </label>
+                              </div>
+                              <div class="field-radio__input-wrap">
+                                <label class="field-radio__name">
+                                  <input class="field-radio__input" type="radio" name="demo-radio-4">
+                                  <span class="field-radio__name-text"><span>d.</span>some money.</span>
+                                </label>
+                              </div>
+                            </div>
+                          </fieldset>
+                        </div>
+
+                      </div>
+
+                      <div class="test__form-text-inputs">
+                        <p class="h2">Send results</p>
+
+                        <label class="field-text">
+                          <span class="field-text__name">Name</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="text" name="name" value="">
+                            <span class="field-text__help-text  error-name"></span>
+                          </span>
+                        </label>
+
+                        <label class="field-text">
+                          <span class="field-text__name">Phone</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="tel" name="tel" value="" placeholder="+380">
+                            <span class="field-text__help-text  error-tel"></span>
+                          </span>
+                        </label>
+
+                        <label class="field-text">
+                          <span class="field-text__name">Email</span>
+                          <span class="field-text__input-wrap">
+                            <input class="field-text__input" type="email" name="email" value="">
+                            <span class="field-text__help-text  error-email"></span>
+                          </span>
+                        </label>
+
+                        <div class="field-actions  test__form-actions">
+                          <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                          <button class="btn  test__form-submit" type="submit">Submit</button>
+                        </div>
+
+                      </div>
+
+                    </form>
+
+                  </div>
+
+                </section>
+
+                <div class="test__img-col">
+                  <div class="test__img" role="presentation">
+                    <picture>
+                      <source data-srcset="img/hero-art.webp" type="image/webp">
+                      <img class="b-lazy" data-src="img/hero-art.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Alt text" width="636" height="532">
+                    </picture>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+
+    @@include('blocks/trial-lesson-modal/trial-lesson-modal.html')
+    @@include('blocks/ask-question-modal/ask-question-modal.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

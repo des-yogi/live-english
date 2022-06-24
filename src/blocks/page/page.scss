@@ -148,11 +148,8 @@ a {
   &:hover,
   &:focus {
     color: $link-color--hover;
+    text-decoration: underline;
   }
-
-  // &:visited {
-  //   color: $link-color--hover;
-  // }
 
   // На больших экранах телефоны-ссылки делаем обычным текстом (если надо)
   &[href^="tel:"] {
@@ -371,5 +368,21 @@ a {
 
   @media (min-width: $screen-lg) {
     width: calc(50% - 12px);
+  }
+}
+
+.modal-open {
+
+  .page-header {
+    // компенсация прыжка при открытии модалки
+    @media (min-width: $screen-xl) {
+      @media (min-width: $screen-xl) {
+        $padding-min: 40px; // нужный отступ от краев экрана
+        $half-screen-xl: $screen-xl / 2 - $padding-min;
+        // padding: 1em calc(50% - 600px); //600px - это $screen-xl / 2 - нужный отступ от края экрана
+        padding-left: calc(50% - #{$half-screen-xl} - 3px);
+        padding-right: calc(50% - #{$half-screen-xl} - 3px);
+      }
+    }
   }
 }
