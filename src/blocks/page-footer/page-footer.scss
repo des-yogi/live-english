@@ -109,6 +109,15 @@
     }
   }
 
+  &__nav-link,
+  &__link {
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
   &__link {
     display: inline-flex;
     align-items: center;
