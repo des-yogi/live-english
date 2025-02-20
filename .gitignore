@@ -1,6 +1,5 @@
 build/
 design/
-docs/
 
 .Saved/
 _arc/
@@ -10,6 +9,8 @@ package-lock.json
 .vscode/
 .DS_Store
 *.log
+*.txt
+*.bak
 *.sublime-*
 *.rar
 *.zip

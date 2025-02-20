@@ -19,17 +19,137 @@
 
         @@include('blocks/hero/hero.html')
 
+        @@include('blocks/consulting/consulting.html')
+
         @@include('blocks/features/features.html')
 
         @@include('blocks/training-programs-card/training-programs-card.html')
 
+        @@include('blocks/advanced-tools/advanced-tools.html')
+
         @@include('blocks/steps/steps.html')
+
+        <section class="container  teachers">
+          <div class="teachers__header">
+            <h2 class="teachers__title">Наші кращі викладачі</h2>
+            <!-- <p>Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Ab delectus vitae nostrum dignissimos error, laboriosam culpa deleniti quis porro tempore cupiditate omnis illo aliquid. Illo dicta veritatis aut soluta doloribus quis ratione, totam ipsum laboriosam quos itaque possimus, atque voluptates incidunt quasi, aspernatur! Facere dolorum aut fuga, consectetur vel laudantium rerum sequi.</p> -->
+          </div>
+
+          <div class="row teachers__row" role="list">
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="training-programs-card__col-link  teachers__link-wrapper">
+              <a href="#" class="btn btn--red"><span>Усі викладачі</span></a>
+            </div>
+          </div>
+
+        </section>
 
         @@include('blocks/reviews-slider/reviews-slider.html')
 
         @@include('blocks/blog-card/blog-card.html')
 
-        @@include('blocks/faq-index/faq-index.html')
+        <section class="container  faq-index">
+          <div class="row" style="gap: 40px 0;">
+
+            <div class="faq-index__contacts-col" style="margin-bottom: 0;">
+              <div class="consulting__form">
+
+                <form class="test__form" action="#" method="post" style="margin-top: 0;">
+
+                  <div class="test__form-text-inputs" style="margin-top: 0;">
+                    <p class="h2" style="margin-bottom: 16px;">Маєте запитання?</p>
+                    <p>Надішліть ваші контакти і ми зв’яжемося з вами ASAP</p>
+                    <!-- <p class="h2">Send results< /p> -->
+                    <label class="field-text">
+                      <span class="field-text__name">Name</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="name" value="">
+                        <span class="field-text__help-text  error-name"></span>
+                      </span>
+                    </label>
+
+                    <label class="field-text">
+                      <span class="field-text__name">Company</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="company" value="">
+                        <span class="field-text__help-text  error-tel"></span>
+                      </span>
+                    </label>
+
+                    <label class="field-text">
+                      <span class="field-text__name">Phone or email</span>
+                      <span class="field-text__input-wrap">
+                        <input class="field-text__input" type="text" name="tel" value="">
+                        <span class="field-text__help-text  error-email"></span>
+                      </span>
+                    </label>
+
+                    <div class="field-actions  test__form-actions">
+                      <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+                      <button class="btn  test__form-submit" type="submit">Submit</button>
+                    </div>
+
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="faq-index__accordion-col" style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="faq-index__contacts">
+                <div class="faq-index__header">
+                  <h3 class="h4  faq-index__title" style="text-align: initial;">Зателефонуйте або напишіть нам</h3>
+                  <!-- <p class="faq-index__intro">Still have unanswered questions and need to get in touch?</p> -->
+                </div>
+
+                <ul class="list-nostyled  faq-index__contact-list">
+
+                  <li class="faq-index__contact-item">
+                    <p class="faq-index__contact-tel"><span>Still have  questions?</span></p>
+                    <a  href="tel:+380500433853" class="faq-index__contact-link">+38 050 043 38 53</a>
+                  </li>
+
+                  <li class="faq-index__contact-item">
+                    @@include('blocks/messenger-links/messenger-links.html')
+                    <p>Don't like phone calls?</p>
+                    <a href="#" class="faq-index__contact-link  faq-index__contact-link--go">
+                      <span>Contact Us</span>
+                    </a>
+                  </li>
+
+                </ul>
+
+                <div class="faq-index__map">
+                  <iframe title="Название карты" class="b-lazy" data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10157.200246810557!2d30.4600611573427!3d50.472757383483476!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cddb0d0eaa85%3A0x8f45c7430b72eb42!2z0JrQuNGX0LLRgdGM0LrQsCDQvtCx0LvQsNGB0L3QsCDQutC70ZbQvdGW0YfQvdCwINC70ZbQutCw0YDQvdGP!5e0!3m2!1sru!2sua!4v1655735985371!5m2!1sru!2sua" style="width:100%;height:200px;border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         @@include('blocks/seo-text/seo-text.html')
 

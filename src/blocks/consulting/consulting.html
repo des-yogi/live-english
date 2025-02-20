@@ -1,0 +1,77 @@
+<!--DEV
+@ @include('blocks/consulting/consulting.html')
+-->
+
+<section class="container  consulting">
+  <h2 class="visually-hidden">Free consultation</h2>
+  <div class="row  consulting__row">
+
+    <div class="consulting__col">
+      <div class="consulting__form">
+        <form class="test__form" action="#" method="post" style="margin-top: 0;">
+
+          <div class="test__form-text-inputs" style="margin-top: 0;">
+            <!-- <p class="h2">Send results< /p> -->
+            <label class="field-text">
+              <span class="field-text__name">Name</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="name" value="">
+                <span class="field-text__help-text  error-name"></span>
+              </span>
+            </label>
+
+            <label class="field-text">
+              <span class="field-text__name">Company</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="company" value="">
+                <span class="field-text__help-text  error-tel"></span>
+              </span>
+            </label>
+
+            <label class="field-text">
+              <span class="field-text__name">Phone or email</span>
+              <span class="field-text__input-wrap">
+                <input class="field-text__input" type="text" name="tel" value="">
+                <span class="field-text__help-text  error-email"></span>
+              </span>
+            </label>
+
+            <div class="field-actions  test__form-actions">
+              <!-- <div class="field-actions__text">* — обязательные поля</div> -->
+              <button class="btn  test__form-submit" type="submit">Submit</button>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="consulting__col">
+      <div class="consulting__advisor">
+        <div class="embed-responsive embed-responsive--1-1  consulting__photo">
+          <picture>
+            <!-- <source srcset="img/advisor.webp, img/advisor.webp 2x" type="image/webp"> -->
+            <source srcset="img/advisor.png, img/advisor.png 2x">
+            <!-- 300x300, 450x450 2x -->
+            <img src="img/advisor.png" alt="Ірина Коваль" width="300" height="300">
+          </picture>
+        </div>
+        <div class="consulting__text">
+          <p class="h4  consulting__intro">
+            <span>На питання відповідає</span>
+            <span>
+              <svg width="24" height="24" aria-hidden="true"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite-svg.svg#chat"></use></svg>
+            </span>
+          </p>
+          <p class="consulting__advisor-name">
+            <span>Ірина Коваль</span>
+            <span class="consulting__advisor-position">Керівник корпоративного навчання</span>
+          </p>
+          <p class="consulting__advisor-tel">
+            <a href="tel:+380969303997">+38 (096) 930 39 97</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

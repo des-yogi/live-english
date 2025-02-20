@@ -10,24 +10,39 @@
 
   &__logo-col {
     @include col(xs, 12);
-    @include col-offset(md, 2);
-    @include col(md, 8);
-    @include col-offset(xl, 0);
+    //@include col-offset(md, 2);
+    @include col(md, 10);
+    //@include col-offset(xl, 0);
     @include col(xl, 5);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px 0;
     margin-bottom: 32px;
     text-align: center;
 
+    @media (min-width: $screen-md) {
+      align-items: flex-start;
+      text-align: initial;
+    }
+
     @media (min-width: $screen-xl) {
       margin-bottom: 0;
-      text-align: initial;
     }
   }
 
   &__menu-col {
     @include col(xs, 12);
-    @include col(md, 8);
-    @include col-offset(xl, 2);
-    @include col(xl, 2.7);
+    @include col(md, 4);
+    //@include col-offset(xl, 2);
+    @include col(xl, 2.3);
+  }
+
+  &__program-col {
+    @include col(xs, 12);
+    @include col(md, 4);
+    @include col(xl, 2.4);
   }
 
   &__contacts-col {
@@ -54,13 +69,23 @@
     margin-top: 32px;
   }
 
-  &__slogan {
-    margin-top: 24px;
+  &__logo-intro {
+    max-width: 400px;
+    margin: 0;
     font-size: $font-size-sm;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  &__slogan {
+    margin: 0;
+    font-size: $font-size-sm;
+    text-wrap: balance;
     color: $text-muted;
   }
 
-  &__menu {
+  &__menu,
+  &__program {
     margin-bottom: 32px;
     text-align: center;
 
@@ -75,19 +100,19 @@
     margin-bottom: 16px;
   }
 
-  &__nav-list {
+  //&__nav-list {
 
-    @media (min-width: $screen-md) {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+    // @media (min-width: $screen-md) {
+    //   display: flex;
+    //   flex-wrap: wrap;
+    //   align-items: flex-start;
+    //   justify-content: space-between;
+    // }
 
-    @media (min-width: $screen-xl) {
-      justify-content: initial;
-    }
-  }
+    // @media (min-width: $screen-xl) {
+    //   justify-content: initial;
+    // }
+  //}
 
   &__nav-item {
     flex: 0 0;

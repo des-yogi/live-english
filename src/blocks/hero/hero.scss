@@ -1,13 +1,13 @@
 .hero {
   position: relative;
   z-index: 0;
-  margin-bottom: 96px;
+  //margin-bottom: 96px;
   background-color: $white;
   box-shadow: -7px 21px 96px rgba(35, 33, 75, 0.13);
 
-  @media (min-width: $screen-xl) {
-    margin-bottom: 112px;
-  }
+  // @media (min-width: $screen-xl) {
+  //   margin-bottom: 112px;
+  // }
 
   $block-name:                &; // #{$block-name}__element
 

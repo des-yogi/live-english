@@ -1,0 +1,144 @@
+.advanced-tools {
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__block {
+
+    &--digibook {
+    }
+
+    &--crm {
+    }
+
+    & + & {
+      margin-top: 96px;
+
+      @media (min-width: $screen-xl) {
+        margin-top: 112px;
+      }
+    }
+
+    &:nth-child(even) {
+
+      #{$block-name}__row {
+
+        @media (min-width: $screen-xl) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      #{$block-name}__col-img {
+
+        @media (max-width: $screen-xl - 1) {
+          order: 1;
+        }
+
+        @media (min-width: $screen-xl) {
+          @include col-offset(xl, 1);
+        }
+      }
+
+      #{$block-name}__col-text {
+
+        @media (min-width: $screen-xl) {
+          @include col-offset(xl, 0);
+        }
+      }
+    }
+  }
+
+  &__row {
+    gap: 40px 0;
+  }
+
+  &__col-img {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 0);
+    @include col(xl, 5);
+  }
+
+  &__col-text {
+    @include col(xs, 12);
+    @include col-offset(md, 1);
+    @include col(md, 10);
+    @include col-offset(xl, 1);
+    @include col(xl, 6);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__img,
+  &__text {
+
+    @media (max-width: $screen-md - 1) {
+      max-width: 532px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: $screen-xl - 1) {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  }
+
+  &__img {
+    background-color: $text-muted;
+    border-radius: $border-radius;
+  }
+
+  &__text {
+
+  }
+
+  &__title {
+
+  }
+
+  &__link-wrapper {
+    display: flex;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  &__link {
+
+    img {
+      display: block;
+    }
+  }
+
+  &__list {
+
+  }
+
+  &__list-item {
+    position: relative;
+    padding-left: 36px;
+
+    & + & {
+      margin-top: 16px;
+    }
+
+    &::before {
+      //display: block;
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-size: 24px;
+      background-position: center;
+      background-image: svg-load('../blocks/sprite-svg/svg/checkbox.svg', fill=$main-color);
+    }
+  }
+}
