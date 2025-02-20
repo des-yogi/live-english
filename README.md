@@ -7,5 +7,6 @@
 * https://des-yogi.github.io/live-english/course.html
 * https://des-yogi.github.io/live-english/tests.html
 * https://des-yogi.github.io/live-english/test-result.html
+* https://des-yogi.github.io/live-english/teachers.html
 * https://des-yogi.github.io/live-english/text-page.html
 * https://des-yogi.github.io/live-english/page-404.html
