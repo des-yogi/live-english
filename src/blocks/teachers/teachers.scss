@@ -1,0 +1,47 @@
+.teachers {
+  margin-bottom: 96px;
+
+  @media (min-width: $screen-xl) {
+    margin-bottom: 112px;
+  }
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__header {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    margin: 0;
+
+    & + p {
+      margin-top: 24px;
+    }
+  }
+
+  &__row {
+    gap: 24px 0;
+  }
+
+  &__col {
+    @include col(xs, 12);
+    @include col(md, 6);
+    @include col(xl, 4);
+  }
+
+  &__link-wrapper {
+    //margin-top: 24px;
+
+    @media (min-width: $screen-md) {
+      margin-top: 8px;
+    }
+
+    @media (min-width: $screen-xl) {
+      margin-top: 16px;
+    }
+
+    a {
+      width: 100%;
+    }
+  }
+}

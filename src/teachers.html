@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="utf-8">
+  <title>Teachers</title>
+  @@include('_include/page_head.html')
+</head>
+
+<body>
+<noscript>У вас отключен JavaScript. Приносим наши извинения, но это делает затруднительным использование данного сайта.</noscript>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+      @@include('blocks/page-header/page-header.html')
+
+      @@include('blocks/breadcrumbs/breadcrumbs.html', {
+        "modClass": ""
+      })
+
+      <main class="main">
+
+        <div class="container  teachers">
+          <div class="teachers__header">
+            <h1 class="teachers__title">Наші кращі викладачі</h1>
+            <p>Interesting and useful thematic articles on the English language and the process of learning it</p>
+          </div>
+
+          <div class="row teachers__row" role="list">
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+
+            <div class="teachers__col">
+              @@include('blocks/teacher-card/teacher-card.html')
+            </div>
+          </div>
+
+        </div>
+
+        @@include('blocks/seo-text/seo-text.html')
+
+      </main>
+
+    </div>
+
+    <div class="page__footer-wrapper">
+      @@include('blocks/page-footer/page-footer.html')
+    </div>
+
+    @@include('blocks/mob-nav/mob-nav.html')
+
+    @@include('blocks/trial-lesson-modal/trial-lesson-modal.html')
+    @@include('blocks/ask-question-modal/ask-question-modal.html')
+  </div>
+
+  @@include('_include/page_bottom.html')
+
+</body>
+</html>

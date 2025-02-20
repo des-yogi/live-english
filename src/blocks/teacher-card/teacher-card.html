@@ -1,0 +1,23 @@
+<!--DEV
+@ @include('blocks/teacher-card/teacher-card.html')
+-->
+
+<div class="teacher-card" role="listitem">
+  <div class="embed-responsive embed-responsive--1-1  teacher-card__photo">
+    <picture>
+      <!-- <source srcset="img/svitlana.webp,
+                      img/svitlana.webp 2x" type="image/webp"> -->
+        <!-- 128x128, 256x256 2x -->
+      <img src="img/svitlana.png"
+           srcset="img/svitlana.png,
+                   img/svitlana.png 2x"
+           alt="Name" width="128" height="128" loading="lazy">
+    </picture>
+  </div>
+  <div class="teacher-card__text">
+    <p class="teacher-card__char  teacher-card__char--name">Марина <span>(Україна)</span></p>
+    <p class="teacher-card__char">Сертифікати: <span>CELTA</span></p>
+    <p class="teacher-card__char">Досвід: <span>9 років</span></p>
+    <p class="teacher-card__char">Диплом: <span>Магістр філології</span></p>
+  </div>
+</div>

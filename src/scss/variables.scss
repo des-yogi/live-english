@@ -60,8 +60,8 @@ $line-height:                 1.6;
 
 $typo-margin-vertical:        1em;
 
-$font-family:                -apple-system, BlinkMacSystemFont, 'Manrope', 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
-//$font-family--headings:      -apple-system, BlinkMacSystemFont, 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family:                'Manrope', 'Roboto', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', 'Arial', sans-serif;
+$font-family--headings:      $font-family;
 $font-family--monospace:     SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 
 

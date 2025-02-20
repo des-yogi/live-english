@@ -5,7 +5,7 @@ const fs = require('fs');
 const gulp = require('gulp');
 const babel = require('gulp-babel');
 const browserSync = require('browser-sync').create();
-const realFavicon = require ('gulp-real-favicon');
+//const realFavicon = require ('gulp-real-favicon');
 
 const postcss = require('gulp-postcss');
 const removeComments = require('postcss-discard-comments');
@@ -36,7 +36,7 @@ let repoUrl = require('./package.json').repository.url.replace(/\.git$/g, '');
 // console.log(repoUrl);
 
 // файл с настройками фавиконок
-const faviconData = './faviconData.json';
+//const faviconData = './faviconData.json';
 
 // Формирование и запись диспетчера подключений (style.scss), который компилируется в style.min.css
 let styleImports = '/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Не пишите сюда ничего вручную, все такие правки будут потеряны.\n * Читайте ./README.md для понимания.\n */\n\n';
@@ -51,11 +51,11 @@ const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
 // Перечисление и настройки плагинов postCSS, которыми обрабатываются стилевые файлы
 let postCssPlugins = [
-  autoprefixer(), // настройки вынесены в package.json, дабы получать их для любой задачи
+  atImport(),
+  autoprefixer({ flexbox: false }), // настройки вынесены в package.json, дабы получать их для любой задачи
   mqpacker({
     sort: true
   }),
-  atImport(),
   inlineSVG(),
   objectFitImages(),
 ];
@@ -218,7 +218,7 @@ gulp.task('copy:fonts', function () {
 });
 
 // Генератор фавиконок
-gulp.task('favicons', function(done) {
+/*gulp.task('favicons', function(done) {
   realFavicon.generateFavicon({
     masterPicture: dirs.srcPath + '/img/favicon-lg.png',
     dest: dirs.buildPath + '/img',
@@ -287,7 +287,7 @@ gulp.task('check:favicons:update', function(done) {
       throw err;
     }
   });
-});
+});*/
 
 // Сборка SVG-спрайта для блока sprite-svg
 let spriteSvgPath = dirs.srcPath + dirs.blocksDirName + '/sprite-svg/svg/';
@@ -397,14 +397,14 @@ gulp.task('html', function() {
       basepath: '@file',
       indent: true,
     }))
-    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
+    //.pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(faviconData)).favicon.html_code))
     .pipe(replace(/\n\s*<!--DEV[\s\S]+?-->/gm, ''))
     .pipe(gulp.dest(dirs.buildPath));
 });
 
 // Конкатенация и углификация Javascript
 gulp.task('js', function (callback) {
-  const uglify = require('gulp-uglify-es').default;// добавлен default
+  const uglify = require('gulp-uglify');
   const concat = require('gulp-concat');
   if(lists.js.length > 0){
     console.log('---------- Обработка JS');
@@ -460,7 +460,7 @@ gulp.task('img:opt', function (callback) {
 // Сборка всего новая под gulp 4
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('sprite:svg', 'sprite:png', 'favicons'),
+  gulp.parallel('sprite:svg', 'sprite:png'),
   gulp.parallel('style', 'style:single', 'js', 'copy:css', 'copy:img', 'copy:js', 'copy:fonts'),
   'html'
 ));

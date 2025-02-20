@@ -55,7 +55,11 @@
     "review-page": [],
     "trial-lesson-modal": [],
     "ask-question-modal": [],
-    "p-404": []
+    "p-404": [],
+    "consulting": [],
+    "advanced-tools": [],
+    "teachers": [],
+    "teacher-card": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
@@ -67,7 +71,6 @@
   ],
   "singleCompiled": [],
   "addJsBefore": [
-    "./node_modules/picturefill/dist/picturefill.min.js",
     "./node_modules/focus-visible/dist/focus-visible.min.js",
     "./node_modules/blazy/blazy.min.js",
     "./node_modules/flickity/dist/flickity.pkgd.min.js",
@@ -75,10 +78,7 @@
     "./node_modules/sticky-js/dist/sticky.min.js",
     "./node_modules/jquery/dist/jquery.min.js",
     "./node_modules/object-fit-images/dist/ofi.js",
-    "./node_modules/popper.js/dist/umd/popper.min.js",
-    "./node_modules/bootstrap/js/dist/util.js",
-    "./node_modules/bootstrap/js/dist/modal.js",
-    "./node_modules/bootstrap/js/dist/collapse.js"
+    "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
   ],
   "addJsAfter": [
     "./src/js/global-script.js"

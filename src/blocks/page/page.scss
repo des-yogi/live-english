@@ -20,12 +20,17 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-
     position: relative;
   }
 
   &__content {
     flex-grow: 1;
+
+    main,
+    .main {
+      position: relative;
+      z-index: 0;
+    }
   }
 
   &__footer-wrapper {
@@ -386,3 +391,9 @@ a {
     }
   }
 }
+
+/*
+@include col(xs, 12);
+@include col(md, 6);
+@include col(xl, 4);
+*/
