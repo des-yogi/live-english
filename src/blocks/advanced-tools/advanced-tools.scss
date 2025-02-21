@@ -9,12 +9,6 @@
 
   &__block {
 
-    &--digibook {
-    }
-
-    &--crm {
-    }
-
     & + & {
       margin-top: 96px;
 
@@ -95,14 +89,6 @@
     border-radius: $border-radius;
   }
 
-  &__text {
-
-  }
-
-  &__title {
-
-  }
-
   &__link-wrapper {
     display: flex;
     gap: 16px;
@@ -116,17 +102,19 @@
     }
   }
 
-  &__list {
+  ul {
+    padding-left: 0;
+    list-style: none;
 
-  }
-
-  &__list-item {
-    position: relative;
-    padding-left: 36px;
-
-    & + & {
+    li + li {
       margin-top: 16px;
     }
+  }
+
+  ul > li,
+  ol > li {
+    position: relative;
+    padding-left: 36px;
 
     &::before {
       //display: block;

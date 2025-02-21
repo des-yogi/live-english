@@ -94,13 +94,14 @@
     span {
       display: block;
       color: $secondary-color;
-      white-space: nowrap;
+      //white-space: nowrap;
     }
   }
 
   &__descr,
   &__descr-color {
     font-size: 20px;
+    text-wrap: balance;
 
     @media (min-width: $screen-md) {
       font-size: 24px;
@@ -112,9 +113,13 @@
     color: $main-color;
   }
 
-
   &__link {
+    min-width: 260px;
     margin-top: 24px;
+
+    @media (max-width: $screen-sm - 1) {
+      width: 100%;
+    }
   }
 
   &__img {
