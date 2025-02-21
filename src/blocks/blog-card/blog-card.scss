@@ -33,8 +33,8 @@
   }
 
   &__link-wrapper {
-    @include col-offset(xs, 2);
-    @include col(xs, 8);
+    //@include col-offset(xs, 2);
+    @include col(xs, 12);
     @include col-offset(md, 3);
     @include col(md, 6);
     @include col-offset(xl, 8);

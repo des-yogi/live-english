@@ -112,10 +112,20 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 16px;
     margin-top: auto;
 
     p {
+      flex: 1 1 auto;
       margin-bottom: 0;
+    }
+
+    .btn {
+
+      @media (max-width: $screen-sm - 1) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
     }
   }
 
@@ -138,8 +148,8 @@
   }
 
   &__col-link {
-    @include col-offset(xs, 2);
-    @include col(xs, 8);
+    //@include col-offset(xs, 2);
+    @include col(xs, 12);
     @include col-offset(md, 4);
     @include col(md, 4);
     @include col-offset(xl, 8);

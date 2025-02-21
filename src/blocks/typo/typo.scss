@@ -247,6 +247,16 @@ blockquote,
   box-shadow: $shadow;
   border-radius: $border-radius;
 
+  @media (max-width: $screen-sm - 1) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  @media (max-width: $screen-md - 1) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
   &::before {
     display: block;
     content: "";
@@ -261,6 +271,14 @@ blockquote,
     background-repeat: no-repeat;
     background-image: svg-load('../blocks/sprite-svg/svg/quotes-icon.svg', fill=$white);
     border-radius: $border-radius;
+
+    @media (max-width: $screen-sm - 1) {
+      left: 16px;
+    }
+
+    @media (max-width: $screen-md - 1) {
+      left: 24px;
+    }
   }
 
   &__quote {
