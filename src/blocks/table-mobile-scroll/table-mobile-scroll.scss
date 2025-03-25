@@ -5,8 +5,8 @@
   display: block;
   width: 100%;
   overflow-x: auto;
-  margin-top: $line-height;
-  margin-bottom: $line-height;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border: 1px solid $border-color;
 
   table {
@@ -19,10 +19,10 @@
   thead,
   tfoot {
 
-    td,
-    th {
-      white-space: nowrap;
-    }
+    // td,
+    // th {
+    //   white-space: nowrap;
+    // }
 
     &:last-child {
 
