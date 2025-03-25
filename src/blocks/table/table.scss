@@ -4,7 +4,7 @@
 
   border-collapse: collapse;
   width: 100%;
-  margin: $line-height 0;
+  margin: 1.5em 0;
   border: 1px solid $border-color;
 
   caption {
@@ -19,10 +19,12 @@
 
   td,
   th {
-    padding: 7px 16px 5px;
+    min-width: 100px;
+    padding: 8px 16px 7px;
     vertical-align: baseline;
     font-weight: inherit;
-    text-align: center;
+    word-break: normal;
+    //text-align: center;
     border-bottom: 1px solid $border-color;
 
     &:not(:first-child) {
@@ -31,7 +33,7 @@
   }
 
   th {
-    //text-align: left;
+    font-weight: 800;
   }
 
   &__header {}
